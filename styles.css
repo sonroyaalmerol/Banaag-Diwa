@@ -38,6 +38,7 @@
   position: relative;
   /*left: 6.88%;
   top: 42.92%;*/
+  left: 6%;
   
   font-family: PublicoText;
   font-style: normal;
@@ -46,9 +47,6 @@
   line-height: 80px;*/
   font-size: 5em;
   line-height: 1em;
-  
-  /* identical to box height */
-  
   letter-spacing: 0.3em;
   
   color: #FFFFFF;
@@ -57,7 +55,7 @@
   position: relative;
   /*left: 8.44%;
   top: 55.28%;*/
-  left: 2%;
+  left: 8%;
 
   font-family: Lato;
   font-style: normal;
@@ -82,6 +80,7 @@
   font-weight: 300;
   font-size: 1.3em;
   line-height: 1.5em;
+  left: 6%;
 
   color: #FFFFFF;
 }
@@ -95,6 +94,7 @@
   font-size: 3em;
   line-height: 1em;
   padding-bottom: 5vh;
+  left: 6%;
 
   color: #FFFFFF;
 }
@@ -107,6 +107,7 @@
   font-weight: 300;
   font-size: 1.5em;
   line-height: 1.5em;
+  left: 6%;
 
   color: #FFFFFF;
   padding-top: 3em;
@@ -122,9 +123,11 @@
   line-height: 1em;
   color: #FFFFFF;
   padding-bottom: 20vh;
+  left: 6%;
 
   
 }
+
 
 
 li{
@@ -187,4 +190,82 @@ li{
 .open > .dropdown-toggle.btn-sbmt {
   color: #233342;
   background-color: #E7B089;
+}
+
+.dot {
+  top: 30vh;
+  left: 11.5vh;
+  position: fixed;
+  height: 0.7em;
+  width: 0.7em;
+  background-color: #233342;
+  border-radius: 100%;
+  border: 2px solid #E7B089;
+  display: inline-block;
+}
+/*.is-selected{
+  background-color: red;
+}*/
+.is-selected {
+  animation: anim_s 1s;
+  animation-fill-mode: forwards;
+}
+.is-deselected {
+  animation: anim_d 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes anim_s {
+  from {}
+  to {background-color: #E7B089;}
+}
+@keyframes anim_d {
+  from {background-color: #E7B089;}
+  to {}
+}
+
+
+
+.arrow{
+  position: fixed;
+  top: 90vh;
+  left: 10vh;
+  width: 0; 
+  height: 0; 
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  
+  border-top: 1em solid #E7B089;
+}
+
+.bounce {
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation: bounce 3.6s ease infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  5.55556% {
+    transform: translateY(0);
+  }
+  11.11111% {
+    transform: translateY(0);
+  }
+  22.22222% {
+    transform: translateY(-15px);
+  }
+  27.77778% {
+    transform: translateY(0);
+  }
+  33.33333% {
+    transform: translateY(-15px);
+  }
+  44.44444% {
+    transform: translateY(0);
+  }
+  100% {
+    transform:  translateY(0);
+  }
 }
