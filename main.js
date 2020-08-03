@@ -3,6 +3,15 @@ var num0 = 0;
 var num1 = 0;
 var allowScroll = true;
 
+const MAX_PAGES = 8; // change depending on number of pages
+
+// always reset to #0
+$('html, body').animate({
+    scrollTop: $("#0").offset().top
+}, {
+    duration: 500
+});
+
 $(window).bind('mousewheel', function(event) {
     num0 = event.originalEvent.wheelDelta/120;
     if (allowScroll) {
@@ -15,6 +24,9 @@ $(window).bind('mousewheel', function(event) {
                     duration: 1000
                 });
             }
+            if (num1 > MAX_PAGES) {
+                num1 = MAX_PAGES;
+            }
         } else if (num0 > 0) {
             // upscroll code
             num1--;
@@ -24,7 +36,7 @@ $(window).bind('mousewheel', function(event) {
                 });
             }
             if (num1 < 0){
-              num1 = 0;
+                num1 = 0;
             }
         }
         $('html, body').animate({
