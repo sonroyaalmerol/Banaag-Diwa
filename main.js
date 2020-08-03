@@ -23,6 +23,9 @@ $(window).bind('mousewheel', function(event) {
                     duration: 700
                 });
             }
+            if (num1 < 0){
+              num1 = 0;
+            }
         }
         $('html, body').animate({
             scrollTop: $(`#${num1}`).offset().top
