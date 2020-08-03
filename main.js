@@ -10,8 +10,10 @@ const MAX_PAGES = 8; // change depending on number of pages
 $('html, body').animate({
     scrollTop: $("#0").offset().top
 }, {
-    duration: 500
+    duration: 1000
 });
+
+var banaagpresent = true;
 
 function scrll_move(){
   $("#arrow1").animate({
@@ -39,14 +41,12 @@ function chckgdlns(){
   $("#banaag").animate({left: "-=250px", opacity: "0"}, {
     duration: 1000
   });
+  banaagpresent = false;
   $("#dot0").addClass('is-deselected');
   $("#dot0").removeClass('is-selected');
   $("#dot4").removeClass('is-deselected');
   $("#dot4").addClass('is-selected');
   num1 = 4;
-  $("#arrow1").animate({opacity: "0"}, {
-    duration: 500
-  });
 }
 
 function sbmt_e(){
@@ -59,15 +59,16 @@ function sbmt_e(){
     }
   });  
   $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-    duration: 500
+    duration: 1000
   });
+  banaagpresent = false;
   $("#dot0").addClass('is-deselected');
   $("#dot0").removeClass('is-selected');
   $("#dot8").removeClass('is-deselected');
   $("#dot8").addClass('is-selected');
   num1 = 8;
   $("#arrow1").animate({opacity: "0"}, {
-    duration: 500
+    duration: 1000
   });
 }
 
@@ -85,10 +86,14 @@ $(window).bind('mousewheel', function(event) {
                 $("#banaag").animate({left: "-=250px", opacity: "0"}, {
                     duration: 1000
                 });
-                $("#arrow1").animate({opacity: "0"}, {
-                  duration: 500
-                });
+                banaagpresent = false;
             }
+            if (num1 === 8) {
+              $("#arrow1").animate({opacity: "0"}, {
+                duration: 500
+              });
+            }
+              
             if (num1 > MAX_PAGES) {
                 num1 = MAX_PAGES;
             }
@@ -100,9 +105,15 @@ $(window).bind('mousewheel', function(event) {
                 $("#banaag").animate({left: "+=250px", opacity: "1"}, {
                     duration: 1000
                 });
+                banaagpresent = true;
                 $("#arrow1").animate({opacity: "1"}, {
-                  duration: 500
+                  duration: 1000
                 });
+            }
+            if (num1 < 8) {
+              $("#arrow1").animate({opacity: "1"}, {
+                duration: 1000
+              });
             }
             if (num1 < 0){
                 num1 = 0;
@@ -124,5 +135,70 @@ $(window).bind('mousewheel', function(event) {
     }
 });
 
+function back_to_top(){
+  allowScroll = false;
+  $('html, body').animate({
+    scrollTop: $("#0").offset().top
+  }, {
+      duration: 1000,
+      complete: function () {
+          allowScroll = true;
+      }
+  });
+  num1 = 0;
+  $("#dot8").addClass('is-deselected');
+  $("#dot8").removeClass('is-selected');
+  $("#dot0").removeClass('is-deselected');
+  $("#dot0").addClass('is-selected');
+  $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+    duration: 1000
+  });
+  banaagpresent = true;
+  $("#arrow1").animate({opacity: "1"}, {
+    duration: 1000
+  });
+}
 
+
+function dot_go_to(dot_num){
+  allowScroll = false;
+  $('html, body').animate({
+    scrollTop: $(`#${dot_num}`).offset().top
+  }, {
+      duration: 1000,
+      complete: function () {
+          console.log(dot_num);
+          allowScroll = true;
+      }
+  });
+  
+  if(dot_num === 8){
+    $("#arrow1").animate({opacity: "0"}, {
+      duration: 1000
+    });
+  }
+  if(dot_num != 8){
+    $("#arrow1").animate({opacity: "1"}, {
+      duration: 1000
+    });
+  }
+  if(dot_num === 0 && banaagpresent == false){
+    $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+      duration: 1000
+    });
+    banaagpresent = true;
+  }
+  if(dot_num != 0 && banaagpresent == true){
+    $("#banaag").animate({left: "-=250px", opacity: "0"}, {
+      duration: 1000
+    });
+    banaagpresent = false;
+  }
+  $(`#dot${num1}`).addClass('is-deselected');
+  $(`#dot${num1}`).removeClass('is-selected');
+  $(`#dot${dot_num}`).removeClass('is-deselected');
+  $(`#dot${dot_num}`).addClass('is-selected');
+  
+  num1 = dot_num;
+}
        
