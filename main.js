@@ -120,7 +120,6 @@ $(window)
                 case -1:
                     num1 = 0;
                     break;
-                    //hello
                 case 1:
                     $('html, body').animate({
                         scrollTop: $("#1").offset().top
