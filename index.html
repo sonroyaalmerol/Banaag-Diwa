@@ -22,15 +22,15 @@
                         </div>
                         <div class="arrow bounce" id="arrow1"></div>
                         <span class="nav-title" id="banaag" style="position: fixed; left: 10vh; top: 10vh;">B<span style="font-size: 0.75em; letter-spacing: 0.3em;">ANAAG</span> D<span style="font-size: 0.75em; letter-spacing: 0.3em;">IWA</span></span>
-                        <span class="dot" id="dot0"></span>
-                        <span class="dot" id="dot1" style="top: 35%;"></span>
-                        <span class="dot" id="dot2" style="top: 40%"></span>
-                        <span class="dot" id="dot3" style="top: 45%"></span>
-                        <span class="dot" id="dot4" style="top: 50%"></span>
-                        <span class="dot" id="dot5" style="top: 55%"></span>
-                        <span class="dot" id="dot6" style="top: 60%"></span>
-                        <span class="dot" id="dot7" style="top: 65%"></span>
-                        <span class="dot" id="dot8" style="top: 70%"></span>
+                        <span class="dot" id="dot0" onclick="dot_go_to(0)"></span>
+                        <span class="dot" id="dot1" onclick="dot_go_to(1)"style="top: 35%;"></span>
+                        <span class="dot" id="dot2" onclick="dot_go_to(2)"style="top: 40%"></span>
+                        <span class="dot" id="dot3" onclick="dot_go_to(3)"style="top: 45%"></span>
+                        <span class="dot" id="dot4" onclick="dot_go_to(4)"style="top: 50%"></span>
+                        <span class="dot" id="dot5" onclick="dot_go_to(5)"style="top: 55%"></span>
+                        <span class="dot" id="dot6" onclick="dot_go_to(6)"style="top: 60%"></span>
+                        <span class="dot" id="dot7" onclick="dot_go_to(7)"style="top: 65%"></span>
+                        <span class="dot" id="dot8" onclick="dot_go_to(8)" style="top: 70%"></span>
                     </nav>
                 </div>        
             </div>
@@ -138,6 +138,9 @@
             </div>
             <div class="col-7 bdy-txt align-self-start" style="padding-left: 1em; padding-top: 1.5em;">
                 <button type="button" class="btn-sbmt" style="width: 13em; height: 4em; " >Submit an Entry</button>
+                <span class="bdy-txt" style="padding-left: 15%; font-size: 1em;">
+                    <a href="#0" style="color:white" onclick="back_to_top()">Back to top</a>
+                </span>
             </div>
         </div>
     </main>
