@@ -5,7 +5,7 @@
     /* The image used */
     /*background-image: url('sources/Concept\ 1.png');*/
     position: fixed;
-    width: 414px;
+    width: 30.03vw;
     height: auto;
     right: 10%;
     top: 20%;
@@ -23,10 +23,10 @@
   font-family: PublicoText;
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
-  line-height: 59px;
-  padding-left: 90px;
-  padding-top: 2px;
+  font-size: 1em;
+  line-height: 1em;
+  padding-left: 4em;
+  padding-top: 1em;
   /* identical to box height */
   
   letter-spacing: 0.2em;
@@ -42,8 +42,11 @@
   font-family: PublicoText;
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
-  line-height: 80px;
+  /*font-size: 80px;
+  line-height: 80px;*/
+  font-size: 5em;
+  line-height: 1em;
+  
   /* identical to box height */
   
   letter-spacing: 0.3em;
@@ -59,8 +62,11 @@
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 24px;
+  /*font-size: 20px;
+  line-height: 24px;*/
+  font-size: 1.2em;
+  line-height: 1.2em;
+
   /* identical to box height */
 
 
@@ -74,8 +80,8 @@
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.3em;
+  line-height: 1.5em;
 
   color: #FFFFFF;
 }
@@ -86,14 +92,43 @@
   font-family: PublicoText;
   font-style: normal;
   font-weight: normal;
-  font-size: 45px;
-  line-height: 45px;
+  font-size: 3em;
+  line-height: 1em;
+  padding-bottom: 5vh;
 
   color: #FFFFFF;
 }
 
+.bdy-txt2{
+  position: relative;
+  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.5em;
+
+  color: #FFFFFF;
+  padding-top: 3em;
+  padding-bottom: 5vh;
+}
+.bdy-title2{
+  position: relative;
+
+  font-family: PublicoText;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 1em;
+  color: #FFFFFF;
+  padding-bottom: 20vh;
+
+  
+}
+
+
 li{
-  margin-bottom: 24px;
+  margin-bottom: 0.5em;
 }
 
 
@@ -110,9 +145,8 @@ li{
   touch-action: manipulation;
   cursor: pointer;
   background-image: none;
-  font-size: 15px;
+  font-size: 0.8em;
   line-height: 1.42857143;
-  border-radius: 1px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -144,8 +178,8 @@ li{
 .btn-sbmt.active {
   background-image: none;
   outline: 0;
-  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 0 1em rgba(0, 0, 0, 0.125);
 }
 
 .btn-sbmt:active,
