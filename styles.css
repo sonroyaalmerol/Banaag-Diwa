@@ -98,6 +98,19 @@
 
   color: #FFFFFF;
 }
+.bdy-gdlns{
+  position: relative;
+
+  font-family: PublicoText;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+  line-height: 1em;
+  padding-bottom: 5vh;
+  left: 6%;
+
+  color: #FFFFFF;
+}
 
 .bdy-txt2{
   position: relative;
@@ -196,8 +209,8 @@ li{
   top: 30vh;
   left: 11.5vh;
   position: fixed;
-  height: 0.7em;
-  width: 0.7em;
+  height: 2vh;
+  width: 2vh;
   background-color: #233342;
   border-radius: 100%;
   border: 2px solid #E7B089;
