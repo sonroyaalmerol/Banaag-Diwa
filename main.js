@@ -96,7 +96,12 @@ $(window).bind('mousewheel', function(event) {
                 duration: 500
               });
             }
-              
+            
+            if(num1 == 5){
+              fix_gdlns();
+            }
+
+
             if (num1 > MAX_PAGES) {
                 num1 = MAX_PAGES;
             }
@@ -165,7 +170,6 @@ function dot_go_to(dot_num){
   }, {
       duration: 1000,
       complete: function () {
-          console.log(dot_num);
           allowScroll = true;
       }
   });
@@ -200,3 +204,36 @@ function dot_go_to(dot_num){
   num1 = dot_num;
 }
        
+/*
+var rect = element.getBoundingClientRect();
+console.log(rect.top, rect.right, rect.bottom, rect.left);
+var bodyRect = document.body.getBoundingClientRect(),
+    elemRect = element.getBoundingClientRect(),
+    offset   = elemRect.top - bodyRect.top;
+
+alert('Element is ' + offset + ' vertical pixels from <body>');
+
+
+var left1 = document.getElementById("left1");
+left1.style.position = "fixed":
+left1.style.position = "absolute";
+*/
+
+/* 
+//-------set "Guidelines" to position:fixed----------
+//https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+//https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window
+//http://jsbin.com/wigaca/1/edit?html,console,output
+function fix_gdlns(){
+  var elemRect = document.html.getBoundingClientRect(),
+      offsetTop   = elemRect.top - 20,
+      offsetLeft   = elemRect.left;
+
+  document.getElementById("bdy-gdlns1").style.position = "fixed";
+  console.log('done fixed');
+  document.getElementById("bdy-gdlns1").style.top = `${offsetTop}px`;
+  console.log(offsetTop);
+  document.getElementById("bdy-gdlns1").style.left = `${offsetLeft}px`;
+  console.log(offsetLeft);
+}
+*/
