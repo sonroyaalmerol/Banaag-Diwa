@@ -16,12 +16,12 @@ $('html, body').animate({
 var banaagpresent = true;
 
 function scrll_move(){
-  $("#arrow1").animate({
+  $(".scrll_arrw").animate({
     top: "82vh"
   }, {
       duration: 1000,
   });
-  $("#arrow1").animate({
+  $(".scrll_arrw").animate({
     top: "80vh"
   }, {
     duration: 1000,
@@ -47,6 +47,9 @@ function chckgdlns(){
   $("#dot4").removeClass('is-deselected');
   $("#dot4").addClass('is-selected');
   num1 = 4;
+  $(".scrll_arrw").animate({opacity: "0"}, {
+    duration: 1000
+  });
 }
 
 function sbmt_e(){
@@ -67,7 +70,7 @@ function sbmt_e(){
   $("#dot8").removeClass('is-deselected');
   $("#dot8").addClass('is-selected');
   num1 = 8;
-  $("#arrow1").animate({opacity: "0"}, {
+  $(".scrll_arrw").animate({opacity: "0"}, {
     duration: 1000
   });
 }
@@ -88,8 +91,8 @@ $(window).bind('mousewheel', function(event) {
                 });
                 banaagpresent = false;
             }
-            if (num1 === 8) {
-              $("#arrow1").animate({opacity: "0"}, {
+            if (num1 > 0) {
+              $(".scrll_arrw").animate({opacity: "0"}, {
                 duration: 500
               });
             }
@@ -106,14 +109,9 @@ $(window).bind('mousewheel', function(event) {
                     duration: 1000
                 });
                 banaagpresent = true;
-                $("#arrow1").animate({opacity: "1"}, {
+                $(".scrll_arrw").animate({opacity: "1"}, {
                   duration: 1000
                 });
-            }
-            if (num1 < 8) {
-              $("#arrow1").animate({opacity: "1"}, {
-                duration: 1000
-              });
             }
             if (num1 < 0){
                 num1 = 0;
@@ -154,7 +152,7 @@ function back_to_top(){
     duration: 1000
   });
   banaagpresent = true;
-  $("#arrow1").animate({opacity: "1"}, {
+  $(".scrll_arrw").animate({opacity: "1"}, {
     duration: 1000
   });
 }
@@ -172,13 +170,13 @@ function dot_go_to(dot_num){
       }
   });
   
-  if(dot_num === 8){
-    $("#arrow1").animate({opacity: "0"}, {
+  if(dot_num === 0){
+    $(".scrll_arrw").animate({opacity: "1"}, {
       duration: 1000
     });
   }
-  if(dot_num != 8){
-    $("#arrow1").animate({opacity: "1"}, {
+  if(dot_num != 0){
+    $(".scrll_arrw").animate({opacity: "0"}, {
       duration: 1000
     });
   }
