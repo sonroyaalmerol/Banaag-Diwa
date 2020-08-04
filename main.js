@@ -96,12 +96,7 @@ $(window).bind('mousewheel', function(event) {
                 duration: 500
               });
             }
-            
-            if(num1 == 5){
-              fix_gdlns();
-            }
-
-
+          
             if (num1 > MAX_PAGES) {
                 num1 = MAX_PAGES;
             }
