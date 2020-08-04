@@ -226,17 +226,28 @@ li{
 }
 
 
-
-.arrow{
+.scrll_arrw{
   position: fixed;
-  top: 90vh;
+  top: 85vh;
   left: 10vh;
+}
+.arrow{
+  position: relative;
   width: 0; 
   height: 0; 
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
   
   border-top: 1em solid #E7B089;
+}
+.scrll{
+  position: relative;
+  padding-bottom: 0.5em;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #E7B089;
 }
 
 .bounce {
