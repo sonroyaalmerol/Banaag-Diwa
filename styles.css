@@ -367,9 +367,9 @@ li{
   }
   .hdr-sub{
     justify-content: center; 
-    top: 22%;
+    top: 21%;
     margin-left: 0%;
-    font-size: 0.4em;
+    font-size: 0.5em;
     letter-spacing: 0.2em;
   }
 }
