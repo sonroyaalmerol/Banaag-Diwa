@@ -239,13 +239,15 @@ function dot_go_to(dot_num){
           allowScroll = true;
       }
   });
+  if(num1 != dot_num){
+    $(`#${num1}`).animate({opacity: "0"}, {
+      duration: 400
+    });
+    $(`#${dot_num}`).animate({opacity: "1"}, {
+      duration: 1000
+    });
+  }
   
-  $(`#${num1}`).animate({opacity: "0"}, {
-    duration: 400
-  });
-  $(`#${dot_num}`).animate({opacity: "1"}, {
-    duration: 1000
-  });
   
   if(dot_num === 0){
     $(".scrll_arrw").animate({opacity: "1"}, {
