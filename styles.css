@@ -397,10 +397,10 @@ li{
   }
   .container{
     justify-content: center;
+    margin-left: 10%
   }
   .bdy-title{
     font-size: 2em;
-    left: 15%;
-    column-count: 10;
+    column-count: 8;
   }
 }
