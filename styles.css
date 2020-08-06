@@ -403,6 +403,9 @@ li{
     /*font-size: 2em;*/
     margin-left: 5vw;
   }
+  .bdy-txt{
+    margin-bottom: 20vh;
+  }
   .bdy-txt, .bdy-txt2{
     font-size: 1em;
     margin-left: 5vw;
