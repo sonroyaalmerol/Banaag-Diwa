@@ -367,10 +367,6 @@ li{
   .nav-bar{
     display: none;
   } 
-  .row {
-    justify-content: left; 
-    margin-left: 20vw;
-  }
   .banaag1{
     position: fixed;
     top: 5vh;
@@ -398,9 +394,17 @@ li{
   }
   .container{
     display: flexbox;
+  }
+  .row {
+    justify-content: left; 
     margin-left: 20vw;
   }
   .bdy-title{
     font-size: 2em;
+    margin-left: 15vw;
+  }
+  .bdy-txt{
+    font-size: 1em;
+    margin-left: 15vw;
   }
 }
