@@ -68,6 +68,12 @@
   
   color: #FFFFFF;
 }
+
+.hdr-title2{
+  font-size: 0.75em; 
+  letter-spacing: 0.5em;
+}
+
 .hdr-sub{
   position: relative;
   /*left: 8.44%;
@@ -239,6 +245,11 @@ li{
   background-color: #E7B089;
 }
 
+
+.sbmt-txt{
+  margin-top: 1.2em;
+}
+
 .btn-back2top{
   margin-left: 15%; font-size: 1em;
 }
@@ -380,6 +391,18 @@ li{
   position: fixed;
   /*width: 4.2em;*/
 }
+.header .menu-btn {
+  display: none;
+}
+
+/* --------------------- */
+
+
+.navbar.navbar-4 .navbar-toggler-icon {
+  background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
+}
+
+/* --------------------*/
 
 @media screen and (max-width: 1081px) {
   
