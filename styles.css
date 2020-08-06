@@ -43,6 +43,14 @@
   color: #CD8054;
 }
 
+.nav-bar{
+  color: #E7B089; 
+  position: fixed; 
+  left: 25vw; 
+  top: 10vh; 
+  align-self: center;
+}
+
 .hdr-title{
   position: relative;
   /*left: 6.88%;
@@ -359,6 +367,9 @@ li{
   .logo{
     top: 5vh;
   }
+  .nav-bar{
+    opacity: 0;
+  } 
   .banaag{
     top: 5vh;
   }
