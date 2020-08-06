@@ -393,7 +393,7 @@ li{
   .hdr-title{
     justify-content: center; 
     top: 20%;
-    margin-left: 10%;
+    margin-left: 15%;
     font-size: 2.8em;
     letter-spacing: 0.2em;
   }
@@ -405,7 +405,7 @@ li{
   .hdr-sub{
     justify-content: center;
     top: 20%;
-    margin-left: 15%;
+    margin-left: 18%;
     font-size: 0.5em;
     letter-spacing: 0.2em;
   }
