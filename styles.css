@@ -373,6 +373,9 @@ li{
   .banaag{
     top: 5vh;
   }
+  .dot{
+    top:20vh;
+  }
   .covid{
     position:absolute;
     top: 30%;
