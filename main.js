@@ -46,7 +46,13 @@ function chckgdlns(){
   $("#dot0").removeClass('is-selected');
   $("#dot4").removeClass('is-deselected');
   $("#dot4").addClass('is-selected');
+  $(`#${num1}`).animate({opacity: "0"}, {
+      duration: 400
+  });
   num1 = 4;
+  $(`#${num1}`).animate({opacity: "1"}, {
+    duration: 1000
+  });
   $(".scrll_arrw").animate({opacity: "0"}, {
     duration: 1000
   });
@@ -77,6 +83,14 @@ function sbmt_e(){
 
 
 $(`#dot${num1}`).addClass('is-selected');
+document.getElementById("1").style.opacity = "0";
+document.getElementById("2").style.opacity = "0";
+document.getElementById("3").style.opacity = "0";
+document.getElementById("4").style.opacity = "0";
+document.getElementById("5").style.opacity = "0";
+document.getElementById("6").style.opacity = "0";
+document.getElementById("7").style.opacity = "0";
+document.getElementById("8").style.opacity = "0";
 $(window).bind('mousewheel', function(event) {
     num0 = event.originalEvent.wheelDelta/120;
     if (allowScroll) {
@@ -126,6 +140,13 @@ $(window).bind('mousewheel', function(event) {
             }
         });
         
+        $(`#${num1}`).animate({opacity: "1"}, {
+          duration: 1000
+        });
+        $(`#${num1-num2}`).animate({opacity: "0"}, {
+          duration: 400
+        });
+        
         $(`#dot${num1-num2}`).addClass('is-deselected');
         $(`#dot${num1-num2}`).removeClass('is-selected');
         $(`#dot${num1}`).removeClass('is-deselected');
@@ -143,7 +164,13 @@ function back_to_top(){
           allowScroll = true;
       }
   });
+  $(`#${num1}`).animate({opacity: "0"}, {
+    duration: 400
+  });
   num1 = 0;
+  $(`#${num1}`).animate({opacity: "1"}, {
+    duration: 1000
+  });
   $("#dot8").addClass('is-deselected');
   $("#dot8").removeClass('is-selected');
   $("#dot0").removeClass('is-deselected');
@@ -167,6 +194,13 @@ function dot_go_to(dot_num){
       complete: function () {
           allowScroll = true;
       }
+  });
+  
+  $(`#${num1}`).animate({opacity: "0"}, {
+    duration: 400
+  });
+  $(`#${dot_num}`).animate({opacity: "1"}, {
+    duration: 1000
   });
   
   if(dot_num === 0){
