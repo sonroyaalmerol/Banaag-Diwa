@@ -357,8 +357,8 @@ li{
   .logo{
     top: 5vh;
   }
-  #banaag{
-    top: 20vh;
+  .nav-title #banaag{
+    top: 5vh;
   }
   .covid{
     position:absolute;
