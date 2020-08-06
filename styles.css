@@ -366,7 +366,7 @@ li{
     letter-spacing: 0.2em;
   }
   .hdr-sub{
-    justify-self: center;
+    justify-content: center;
     top: 20%;
     margin-left: 15%;
     font-size: 0.5em;
