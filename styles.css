@@ -101,6 +101,18 @@
 
   color: #FFFFFF;
 }
+.bdy-gdlns-txt{
+  position: relative;
+  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  left: 6%;
+
+  color: #FFFFFF;
+}
 
 .bdy-title{
   position: relative;
@@ -403,11 +415,12 @@ li{
     /*font-size: 2em;*/
     margin-left: 5vw;
   }
-  .bdy-txt{
+  .bdy-gdlns-txt{
+    font-size: 1em;
     margin-bottom: 20vh;
+    margin-left: 5vw;
   }
   .bdy-txt, .bdy-txt2{
-    font-size: 1em;
-    margin-left: 5vw;
+    margin-left: 10vw;
   }
 }
