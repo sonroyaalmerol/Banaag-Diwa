@@ -371,6 +371,7 @@ li{
     display: none;
   } 
   .banaag1{
+    position: fixed;
     top: 5vh;
   }
   .covid{
