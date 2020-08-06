@@ -2,6 +2,9 @@
 var num0 = 0;
 var num1 = 0;
 var num2 = 0;
+var num_l = 0;
+var num_l_prev = 0;
+var l_width = 3.3;
 var allowScroll = true;
 
 const MAX_PAGES = 8; // change depending on number of pages
@@ -91,6 +94,9 @@ document.getElementById("5").style.opacity = "0";
 document.getElementById("6").style.opacity = "0";
 document.getElementById("7").style.opacity = "0";
 document.getElementById("8").style.opacity = "0";
+$(`#line${num_l}`).animate({width: `${l_width}em`}, {
+  duration: 1000
+});
 $(window).bind('mousewheel', function(event) {
     num0 = event.originalEvent.wheelDelta/120;
     if (allowScroll) {
@@ -151,6 +157,35 @@ $(window).bind('mousewheel', function(event) {
         $(`#dot${num1-num2}`).removeClass('is-selected');
         $(`#dot${num1}`).removeClass('is-deselected');
         $(`#dot${num1}`).addClass('is-selected');
+        num_l_prev = num_l;
+        if(num1 < 1){
+          num_l = 0;
+          l_width = 3.3;
+        }
+        else if(num1 > 0 && num1 < 3){
+          num_l = 1;
+          l_width = 3.5;
+        }
+        else if(num1 == 3){
+          num_l = 2;
+          l_width = 3.6;
+        }
+        else if (num1 > 3 && num1 < 8){
+          num_l = 3;
+          l_width = 6.6;
+        }
+        else if(num1 == 8){
+          num_l = 4;
+          l_width = 4.2;
+        }
+        if(Math.abs(num_l-num_l_prev) != 0){ 
+          $(`#line${num_l}`).animate({width: `${l_width}em`}, {
+            duration: 1000
+          });
+          $(`#line${num_l_prev}`).animate({width: "0em"}, {
+            duration: 1000
+          });
+        }
     }
 });
 
@@ -182,6 +217,15 @@ function back_to_top(){
   $(".scrll_arrw").animate({opacity: "1"}, {
     duration: 1000
   });
+  num_l_prev = 4;
+  num_l = 0;
+  l_width = 3.3;
+  $(`#line${num_l}`).animate({width: `${l_width}em`}, {
+    duration: 1000
+  });
+  $(`#line${num_l_prev}`).animate({width: "0em"}, {
+    duration: 1000
+  });
 }
 
 
@@ -207,31 +251,137 @@ function dot_go_to(dot_num){
     $(".scrll_arrw").animate({opacity: "1"}, {
       duration: 1000
     });
+    if(banaagpresent == false){
+      $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+        duration: 1000
+      });
+      banaagpresent = true;
+    }
   }
   if(dot_num != 0){
     $(".scrll_arrw").animate({opacity: "0"}, {
       duration: 1000
     });
-  }
-  if(dot_num === 0 && banaagpresent == false){
-    $("#banaag").animate({left: "+=250px", opacity: "1"}, {
-      duration: 1000
-    });
-    banaagpresent = true;
-  }
-  if(dot_num != 0 && banaagpresent == true){
-    $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-      duration: 1000
-    });
-    banaagpresent = false;
+    if(banaagpresent == true){
+      $("#banaag").animate({left: "-=250px", opacity: "0"}, {
+        duration: 1000
+      });
+      banaagpresent = false;
+    }
   }
   $(`#dot${num1}`).addClass('is-deselected');
   $(`#dot${num1}`).removeClass('is-selected');
   $(`#dot${dot_num}`).removeClass('is-deselected');
   $(`#dot${dot_num}`).addClass('is-selected');
-  
   num1 = dot_num;
+  num_l_prev = num_l;
+  if(num1 < 1){
+    num_l = 0;
+    l_width = 3.3;
+  }
+  else if(num1 > 0 && num1 < 3){
+    num_l = 1;
+    l_width = 3.5;
+  }
+  else if(num1 == 3){
+    num_l = 2;
+    l_width = 3.6;
+  }
+  else if (num1 > 3 && num1 < 8){
+    num_l = 3;
+    l_width = 6.6;
+  }
+  else{
+    num_l = 4;
+    l_width = 4.2;
+  }
+  if(Math.abs(num_l-num_l_prev) != 0){ 
+    $(`#line${num_l}`).animate({width: `${l_width}em`}, {
+      duration: 1000
+    });
+    $(`#line${num_l_prev}`).animate({width: "0em"}, {
+      duration: 1000
+    });
+  }
 }
+
+
+function nav_go_to(num){
+  allowScroll = false;
+  $('html, body').animate({
+    scrollTop: $(`#${num}`).offset().top
+  }, {
+      duration: 1000,
+      complete: function () {
+          allowScroll = true;
+      }
+  });
+  
+  $(`#${num1}`).animate({opacity: "0"}, {
+    duration: 400
+  });
+  $(`#${num}`).animate({opacity: "1"}, {
+    duration: 1000
+  });
+  
+  if(num === 0){
+    $(".scrll_arrw").animate({opacity: "1"}, {
+      duration: 1000
+    });
+    if(banaagpresent == false){
+      $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+        duration: 1000
+      });
+      banaagpresent = true;
+    }
+  }
+  if(num != 0){
+    $(".scrll_arrw").animate({opacity: "0"}, {
+      duration: 1000
+    });
+    if(banaagpresent == true){
+      $("#banaag").animate({left: "-=250px", opacity: "0"}, {
+        duration: 1000
+      });
+      banaagpresent = false;
+    }
+  }
+  $(`#dot${num1}`).addClass('is-deselected');
+  $(`#dot${num1}`).removeClass('is-selected');
+  $(`#dot${num}`).removeClass('is-deselected');
+  $(`#dot${num}`).addClass('is-selected');
+  num1 = num;
+  num_l_prev = num_l;
+  if(num1 < 1){
+    num_l = 0;
+    l_width = 3.3;
+  }
+  else if(num1 > 0 && num1 < 3){
+    num_l = 1;
+    l_width = 3.5;
+  }
+  else if(num1 == 3){
+    num_l = 2;
+    l_width = 3.6;
+  }
+  else if (num1 > 3 && num1 < 8){
+    num_l = 3;
+    l_width = 6.6;
+  }
+  else{
+    num_l = 4;
+    l_width = 4.2;
+  }
+  if(Math.abs(num_l-num_l_prev) != 0){ 
+    $(`#line${num_l}`).animate({width: `${l_width}em`}, {
+      duration: 1000
+    });
+    $(`#line${num_l_prev}`).animate({width: "0em"}, {
+      duration: 1000
+    });
+  }
+}
+
        
 /*
 var rect = element.getBoundingClientRect();
