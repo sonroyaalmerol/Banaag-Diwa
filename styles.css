@@ -319,13 +319,13 @@ li{
     transform: translateY(0);
   }
   22.22222% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
   27.77778% {
     transform: translateY(0);
   }
   33.33333% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
   44.44444% {
     transform: translateY(0);
