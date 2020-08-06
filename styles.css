@@ -169,6 +169,11 @@
   
 }
 
+.sbmt-title{
+  font-size: 4.5em; 
+  line-height: 0.2em;
+}
+
 
 
 li{
@@ -428,5 +433,9 @@ li{
   .bdy-txt, .bdy-txt2{
     font-size: 1.2em;
     margin-left: 5vw;
+  }
+  .sbmt-title{
+    font-size: 3em; 
+    line-height: 0.2em;
   }
 }
