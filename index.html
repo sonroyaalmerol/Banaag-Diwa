@@ -21,21 +21,25 @@
                             <img src="sources/Logo BD.png" alt="" style="position: fixed; left: 10vh; top: 10vh;" width="40vh" height="auto">
                         </div>
                         <div class="scrll_arrw bounce">
-                            <div class="scrll" id="scrll1">scroll</div>
+                            <span class="scrll" id="scrll1">scroll</span>
                             <div class="arrow" id="arrow1"></div>
+                            <!--<div class="arrow" id="arrow1"></div>-->
+                            
                         </div>
                         <span class="nav-title" id="banaag" style="position: fixed; left: 10vh; top: 10vh;">B<span style="font-size: 0.75em; letter-spacing: 0.3em;">ANAAG</span> D<span style="font-size: 0.75em; letter-spacing: 0.3em;">IWA</span></span>
 
                         <span class="nav-title" style="color: #E7B089; position: fixed; left: 60vh; top: 10vh; align-self: center;">
                             
-                            <span class="a_line" ></span>
-                            <span id="_about">About</span>
-                            <span class="p_line" style="margin-left: 2em;"></span>
-                            <span id="_prize" style="padding-left:2em">Prizes</span>
-                            <span class="g_line" style="margin-left: 2em;"></span>
-                            <span id="_gdlns" style="padding-left:2em">Guidelines</span>
-                            <span class="s_line" style="margin-left: 2em;"></span>
-                            <span id="_submit" style="padding-left:2em">Submit</span>
+                            <span class="_line" id="line0"></span>
+                            <span id="_home" onclick="nav_go_to(0)" style="cursor: pointer;">Home</span>
+                            <span class="_line" id="line1" style="margin-left: 2em;"></span>
+                            <span id="_about" onclick="nav_go_to(1)" style="padding-left:2em;cursor: pointer;">About</span>
+                            <span class="_line" id="line2" style="margin-left: 2em;"></span>
+                            <span id="_prize" onclick="nav_go_to(3)" style="padding-left:2em;cursor: pointer;">Prizes</span>
+                            <span class="_line" id="line3" style="margin-left: 2em;"></span>
+                            <span id="_gdlns" onclick="nav_go_to(4)" style="padding-left:2em;cursor: pointer;">Guidelines</span>
+                            <span class="_line" id="line4" style="margin-left: 2em;"></span>
+                            <span id="_submit" onclick="nav_go_to(8)" style="padding-left:2em;cursor: pointer;">Submit</span>
                             
                         </span>
                         </div>
