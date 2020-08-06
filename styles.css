@@ -348,6 +348,13 @@ li{
     justify-content: center; 
     margin-left: 0;
   }
+  .covid{
+    position:absolute;
+    top: 20%;
+    justify-self: center;
+    width: 70vw;
+    height: auto;
+  }
   .hdr-title{
     justify-content: center; 
     margin-left: 0%;
