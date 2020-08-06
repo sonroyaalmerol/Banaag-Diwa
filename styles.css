@@ -368,7 +368,7 @@ li{
     top: 5vh;
   }
   .nav-bar{
-    opacity: 0;
+    display: none;
   } 
   .banaag{
     top: 5vh;
