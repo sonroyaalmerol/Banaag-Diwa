@@ -294,3 +294,32 @@ li{
     transform:  translateY(0);
   }
 }
+
+.a_line{
+  height:2.5em;
+  border-bottom: 0.15em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  width: 3.5em;
+}
+.p_line{
+  height:2.5em;
+  border-bottom: 0.15em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  width: 3.6em;
+}
+.g_line{
+  height:2.5em;
+  border-bottom: 0.15em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  width: 6.6em;
+}
+.s_line{
+  height:2.5em;
+  border-bottom: 0.15em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  width: 4.2em;
+}
