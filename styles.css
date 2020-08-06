@@ -253,6 +253,7 @@ li{
   
   border-top: 1em solid #E7B089;
 }
+
 .scrll{
   position: relative;
   padding-bottom: 0.5em;
@@ -279,13 +280,13 @@ li{
     transform: translateY(0);
   }
   22.22222% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
   27.77778% {
     transform: translateY(0);
   }
   33.33333% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
   44.44444% {
     transform: translateY(0);
@@ -294,32 +295,49 @@ li{
     transform:  translateY(0);
   }
 }
-
-.a_line{
+._line{
   height:2.5em;
-  border-bottom: 0.15em solid #E7B089;
+  border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  width: 3.5em;
+  /*width: 3.2em;*/
+  /*width: 3.5em;*/
+  /*width: 3.6em;*/
+  /*width: 6.6em;*/
+  /*width: 4.2em;*/
 }
-.p_line{
+._line0{
   height:2.5em;
-  border-bottom: 0.15em solid #E7B089;
+  border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  width: 3.6em;
+  /*width: 3.2em;*/
 }
-.g_line{
+._line1{
   height:2.5em;
-  border-bottom: 0.15em solid #E7B089;
+  border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  width: 6.6em;
+  /*width: 3.5em;*/
 }
-.s_line{
+._line2{
   height:2.5em;
-  border-bottom: 0.15em solid #E7B089;
+  border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  width: 4.2em;
+  /*width: 3.6em;*/
+}
+._line3{
+  height:2.5em;
+  border-bottom: 0.1em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  /*width: 6.6em;*/
+}
+._line4{
+  height:2.5em;
+  border-bottom: 0.1em solid #E7B089;
+  top: 10vh;
+  position: fixed;
+  /*width: 4.2em;*/
 }
