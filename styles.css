@@ -5,8 +5,10 @@
     /* The image used */
     /*background-image: url('sources/Concept\ 1.png');*/
     position: fixed;
-    width: 30.03vw;
-    height: auto;
+    /*width: 30.03vw;
+    height: auto;*/
+    width: auto;
+    height: 70vh;
     right: 10%;
     top: 20%;
   
@@ -25,9 +27,8 @@
   font-weight: 500;
   font-size: 1em;
   line-height: 1em;
-  padding-left: 4em;
-  padding-top: 1em;
-  /* identical to box height */
+  margin-left: 4em;
+  margin-top: 1em;
   
   letter-spacing: 0.2em;
   
@@ -38,7 +39,7 @@
   position: relative;
   /*left: 6.88%;
   top: 42.92%;*/
-  left: 6%;
+  margin-left: 6%;
   
   font-family: PublicoText;
   font-style: normal;
@@ -55,7 +56,7 @@
   position: relative;
   /*left: 8.44%;
   top: 55.28%;*/
-  left: 8%;
+  margin-left: 8%;
 
   font-family: Lato;
   font-style: normal;
@@ -93,7 +94,7 @@
   font-weight: normal;
   font-size: 3em;
   line-height: 1em;
-  padding-bottom: 5vh;
+  margin-bottom: 5vh;
   left: 6%;
 
   color: #FFFFFF;
@@ -106,7 +107,6 @@
   font-weight: normal;
   font-size: 3em;
   line-height: 1em;
-  padding-bottom: 5vh;
   left: 6%;
 
   color: #FFFFFF;
@@ -123,8 +123,8 @@
   left: 6%;
 
   color: #FFFFFF;
-  padding-top: 3em;
-  padding-bottom: 5vh;
+  margin-top: 3em;
+  margin-bottom: 5vh;
 }
 .bdy-title2{
   position: relative;
@@ -135,7 +135,7 @@
   font-size: 3em;
   line-height: 1em;
   color: #FFFFFF;
-  padding-bottom: 20vh;
+  margin-bottom: 20vh;
   left: 6%;
 
   
@@ -207,7 +207,8 @@ li{
 
 .dot {
   top: 30vh;
-  left: 11.5vh;
+  left: 6vw;
+  margin-left: 0.5em;
   position: fixed;
   height: 2vh;
   width: 2vh;
@@ -242,7 +243,7 @@ li{
 .scrll_arrw{
   position: fixed;
   top: 85vh;
-  left: 10vh;
+  left: 6vw;
 }
 .arrow{
   position: relative;
@@ -340,4 +341,11 @@ li{
   top: 10vh;
   position: fixed;
   /*width: 4.2em;*/
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    justify-content: center; 
+    margin-left: 0;
+  }
 }
