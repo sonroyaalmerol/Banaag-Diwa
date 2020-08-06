@@ -343,9 +343,15 @@ li{
   /*width: 4.2em;*/
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1081px) {
   .row {
     justify-content: center; 
     margin-left: 0;
+  }
+  .hdr-title{
+    justify-content: center; 
+    margin-left: 0%;
+    font-size: 10vw;
+    letter-spacing: 0.6vw;
   }
 }
