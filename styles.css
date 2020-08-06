@@ -437,5 +437,11 @@ li{
   .sbmt-title{
     font-size: 3em; 
     line-height: 1em;
+    margin-left: 5vw;
+  }
+  
+  .sbmt-txt{
+    margin-left: 1em; 
+    margin-top: 1.5em;
   }
 }
