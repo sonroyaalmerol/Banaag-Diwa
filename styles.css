@@ -6,7 +6,9 @@
   left: 6vw; 
   top: 10vh;
 }
-
+.banaag{
+  position: fixed; left: 6vw; top: 10vh;
+}
 .covid {
     /* The image used */
     /*background-image: url('sources/Concept\ 1.png');*/
