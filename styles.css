@@ -394,6 +394,7 @@ li{
   }
   .container{
     display: flexbox;
+    margin-left: 20vw;
   }
   .row {
     justify-content: center; 
