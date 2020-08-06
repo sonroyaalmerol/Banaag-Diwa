@@ -360,10 +360,7 @@ li{
 }
 
 @media screen and (max-width: 1081px) {
-  .row {
-    justify-content: center; 
-    margin-left: 0;
-  }
+  
   .logo{
     top: 5vh;
   }
@@ -395,8 +392,8 @@ li{
     font-size: 0.5em;
     letter-spacing: 0.2em;
   }
-  .container{
-    justify-content: center;
+  .row {
+    justify-content: center; 
     margin-left: 20vw;
   }
   .bdy-title{
