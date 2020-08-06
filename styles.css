@@ -399,12 +399,12 @@ li{
     justify-content: left; 
     margin-left: 20vw;
   }
-  .bdy-title{
-    font-size: 2em;
+  .bdy-title, .bdy-gdlns, .bdy-title2{
+    /*font-size: 2em;*/
     margin-left: 10vw;
   }
-  .bdy-txt{
-    font-size: 1em;
+  .bdy-txt, .bdy-txt2{
+    /*font-size: 1em;*/
     margin-left: 10vw;
   }
 }
