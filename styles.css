@@ -435,6 +435,7 @@ li{
     margin-left: 5vw;
   }
   .sbmt-title{
+    justify-self: left;
     font-size: 3em; 
     line-height: 1em;
     margin-left: 5vw;
