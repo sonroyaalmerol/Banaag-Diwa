@@ -203,6 +203,7 @@ li{
   color: #E7B089;
   background-color: #233342;
   border: 2px solid #E7B089;
+  width: 13em; height: 4em;
   /*border-color: #E7B089;*/
 }
 .btn-sbmt:focus,
@@ -236,6 +237,10 @@ li{
 .open > .dropdown-toggle.btn-sbmt {
   color: #233342;
   background-color: #E7B089;
+}
+
+.btn-back2top{
+  margin-left: 15%; font-size: 1em;
 }
 
 .dot {
@@ -438,11 +443,14 @@ li{
     justify-self: left;
     font-size: 3em; 
     line-height: 1em;
-    margin-left: 5vw;
+    margin-left: 10vw;
   }
-  
   .sbmt-txt{
-    margin-left: 1em; 
-    margin-top: 1.5em;
+    margin-left: 10vw; 
+    margin-top: 0em;
+  }
+  .btn-back2top{
+    margin-left: 0%; 
+    font-size: 0.5em;
   }
 }
