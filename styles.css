@@ -398,4 +398,8 @@ li{
   .container{
     justify-content: center;
   }
+  .bdy-title{
+    font-size: 1.5em;
+    left: 15%;
+  }
 }
