@@ -393,7 +393,7 @@ li{
     letter-spacing: 0.2em;
   }
   .container{
-    display: flex;
+    display: flexbox;
   }
   .row {
     justify-content: center; 
