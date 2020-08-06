@@ -350,15 +350,23 @@ li{
   }
   .covid{
     position:absolute;
-    top: 20%;
+    top: 30%;
     justify-self: center;
     width: 70vw;
     height: auto;
   }
   .hdr-title{
     justify-content: center; 
+    top: 80%;
     margin-left: 0%;
     font-size: 3em;
     letter-spacing: 0.18em;
+  }
+  .hdr-title{
+    justify-content: center; 
+    top: 85%;
+    margin-left: 0%;
+    font-size: 0.72em;
+    letter-spacing: 0.72em;
   }
 }
