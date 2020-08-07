@@ -575,10 +575,12 @@ li{
     font-size: 3em; 
     line-height: 1em;
     margin-left: 10vw;
+    top: -5%;
   }
   .sbmt-txt{
     margin-left: 10vw; 
     margin-top: 0em;
+    top: -6%;
   }
   .btn-back2top{
     margin-left: 0%; 
