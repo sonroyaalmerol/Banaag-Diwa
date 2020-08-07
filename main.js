@@ -32,60 +32,9 @@ function scrll_move(){
 }
 
 
-function chckgdlns(){
-  $('html, body').animate({
-    scrollTop: $("#4").offset().top
-  }, {
-    duration: 1000,
-    complete: function () {
-        allowScroll = true;
-    }
-  });  
-  $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-    duration: 1000
-  });
-  banaagpresent = false;
-  $("#dot0").addClass('is-deselected');
-  $("#dot0").removeClass('is-selected');
-  $("#dot4").removeClass('is-deselected');
-  $("#dot4").addClass('is-selected');
-  $(`#${num1}`).animate({opacity: "0"}, {
-      duration: 400
-  });
-  num1 = 4;
-  $(`#${num1}`).animate({opacity: "1"}, {
-    duration: 1000
-  });
-  $(".scrll_arrw").animate({opacity: "0"}, {
-    duration: 1000
-  });
-}
-
-function sbmt_e(){
-  $('html, body').animate({
-    scrollTop: $("#8").offset().top
-  }, {
-    duration: 1000,
-    complete: function () {
-        allowScroll = true;
-    }
-  });  
-  $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-    duration: 1000
-  });
-  banaagpresent = false;
-  $("#dot0").addClass('is-deselected');
-  $("#dot0").removeClass('is-selected');
-  $("#dot8").removeClass('is-deselected');
-  $("#dot8").addClass('is-selected');
-  num1 = 8;
-  $(".scrll_arrw").animate({opacity: "0"}, {
-    duration: 1000
-  });
-}
-
 
 $(`#dot${num1}`).addClass('is-selected');
+$(`#mobile${num1}`).addClass('mobile_selected');
 document.getElementById("1").style.opacity = "0";
 document.getElementById("2").style.opacity = "0";
 document.getElementById("3").style.opacity = "0";
@@ -185,6 +134,10 @@ $(window).bind('mousewheel', function(event) {
           $(`#line${num_l_prev}`).animate({width: "0em"}, {
             duration: 1000
           });
+          $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
+          $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
+          $(`#mobile${num_l}`).removeClass('mobile_deselected');
+          $(`#mobile${num_l}`).addClass('mobile_selected');
         }
     }
 });
@@ -304,6 +257,10 @@ function dot_go_to(dot_num){
     $(`#line${num_l_prev}`).animate({width: "0em"}, {
       duration: 1000
     });
+    $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
+    $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
+    $(`#mobile${num_l}`).removeClass('mobile_deselected');
+    $(`#mobile${num_l}`).addClass('mobile_selected');
   }
 }
 
@@ -381,6 +338,10 @@ function nav_go_to(num){
     $(`#line${num_l_prev}`).animate({width: "0em"}, {
       duration: 1000
     });
+    $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
+    $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
+    $(`#mobile${num_l}`).removeClass('mobile_deselected');
+    $(`#mobile${num_l}`).addClass('mobile_selected');
   }
 }
 
@@ -418,3 +379,123 @@ function fix_gdlns(){
   console.log(offsetLeft);
 }
 */
+
+$(document).ready(function() {
+  $(".button1").click(function() {
+    $(".mobile_nav").toggleClass("active");
+    $(".button1").toggleClass("btn");
+  });
+});
+
+let touchstartY = 0;
+let touchendY = 0;
+
+document.addEventListener('touchstart', function(event) {
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+document.addEventListener('touchend', function(event) {
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
+
+function handleGesture() {
+    /*if (touchendY <= touchstartY) {
+        console.log('Swiped up');
+    }
+    if (touchendY >= touchstartY) {
+        console.log('Swiped down');
+    }*/
+    if (allowScroll) {
+      allowScroll = false;
+      if (touchendY < touchstartY) {
+          // downscroll code
+          num1++;
+          num2 = 1;
+          if (num1 === 1) {
+              $("#banaag").animate({left: "-=250px", opacity: "0"}, {
+                  duration: 1000
+              });
+              banaagpresent = false;
+          }
+          if (num1 > 0) {
+            $(".scrll_arrw").animate({opacity: "0"}, {
+              duration: 500
+            });
+          }
+        
+          if (num1 > MAX_PAGES) {
+              num1 = MAX_PAGES;
+          }
+      } else if (touchendY > touchstartY) {
+          // upscroll code
+          num1--;
+          num2 = -1;
+          if (num1 === 0) {
+              $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+                  duration: 1000
+              });
+              banaagpresent = true;
+              $(".scrll_arrw").animate({opacity: "1"}, {
+                duration: 1000
+              });
+          }
+          if (num1 < 0){
+              num1 = 0;
+          }
+      }
+      $('html, body').animate({
+          scrollTop: $(`#${num1}`).offset().top
+      }, {
+          duration: 1000,
+          complete: function () {
+              allowScroll = true;
+          }
+      });
+      
+      $(`#${num1}`).animate({opacity: "1"}, {
+        duration: 1000
+      });
+      $(`#${num1-num2}`).animate({opacity: "0"}, {
+        duration: 400
+      });
+      
+      $(`#dot${num1-num2}`).addClass('is-deselected');
+      $(`#dot${num1-num2}`).removeClass('is-selected');
+      $(`#dot${num1}`).removeClass('is-deselected');
+      $(`#dot${num1}`).addClass('is-selected');
+      num_l_prev = num_l;
+      if(num1 < 1){
+        num_l = 0;
+        l_width = 3.3;
+      }
+      else if(num1 > 0 && num1 < 3){
+        num_l = 1;
+        l_width = 3.5;
+      }
+      else if(num1 == 3){
+        num_l = 2;
+        l_width = 3.6;
+      }
+      else if (num1 > 3 && num1 < 8){
+        num_l = 3;
+        l_width = 6.6;
+      }
+      else if(num1 == 8){
+        num_l = 4;
+        l_width = 4.2;
+      }
+      if(Math.abs(num_l-num_l_prev) != 0){ 
+        $(`#line${num_l}`).animate({width: `${l_width}em`}, {
+          duration: 1000
+        });
+        $(`#line${num_l_prev}`).animate({width: "0em"}, {
+          duration: 1000
+        });
+        $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
+        $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
+        $(`#mobile${num_l}`).removeClass('mobile_deselected');
+        $(`#mobile${num_l}`).addClass('mobile_selected');
+      }
+  }
+}
