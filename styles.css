@@ -289,6 +289,8 @@ li{
 }
 
 
+
+
 .scrll_arrw{
   position: fixed;
   top: 85vh;
@@ -397,9 +399,115 @@ li{
 
 /* --------------------- */
 
+.mobile_nav {
+  background: #233342;
+  width: 15em;
+  height: 100vh;
+  position: fixed;
+  top: 0vh;
+  right: -15em;
+  display: none;
+  transition: all 0.5s;
+  z-index: 1;
+}
 
-.navbar.navbar-4 .navbar-toggler-icon {
-  background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
+.active {
+  right: 0%;
+  transition: all 0.5s;
+}
+
+.mobile_nav ul {
+  padding: 10vh 0;
+  transition: all 0.5s;
+}
+
+.mobile_nav li {
+  color: #E7B089;
+  text-align: center;
+  height: 3em;
+  padding-top: 1em;
+  font-family: PublicoText;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.5s;
+  list-style-type: none;
+}
+
+.button1 {
+  /*background: #bb0000;*/
+  width: 5em;
+  height: 3em;
+  position: absolute;
+  top: 10%;
+  right: 15em;
+  cursor: pointer;
+  border: 0px;
+  outline: none;
+}
+
+.button1 span {
+  background: #E7B089;
+  width: 1.5em;
+  height: 0.1em;
+  display: block;
+  position: absolute;
+  top: 45%;
+  right: 60%;
+}
+
+.button1 span:before {
+  content: '';
+  background: #E7B089;
+  width: 1.5em;
+  height: 0.1em;
+  display: block;
+  position: absolute;
+  top: -0.5em;
+}
+
+.button1 span:after {
+  content: '';
+  background: #E7B089;
+  width: 1.5em;
+  height: 0.1em;
+  display: block;
+  position: absolute;
+  top: 0.5em;
+}
+
+.button1.btn span {
+  background: transparent;
+  transition: all 0.5s;
+}
+
+.button1.btn span:before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: all 0.5s;
+}
+
+.button1.btn span:after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: all 0.5s;
+}
+
+.mobile_selected {
+  animation: m_anim_s 1s;
+  animation-fill-mode: forwards;
+}
+.mobile_deselected {
+  animation: m_anim_d 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes m_anim_s {
+  from {}
+  to {background-color: #E7B089; color: #233342;}
+}
+@keyframes m_anim_d {
+  from {background-color: #E7B089; color: #233342;}
+  to {}
 }
 
 /* --------------------*/
@@ -475,5 +583,25 @@ li{
   .btn-back2top{
     margin-left: 0%; 
     font-size: 0.5em;
+  }
+  .mobile_nav {
+    position: fixed;
+    width: 15em;
+    top: -5vh;
+    height: 100vh;
+    display: block;
+    transition: all 0.5s;
+  }
+  .mobile_nav ul {
+    padding: 17vh 0;
+    transition: all 0.5s;
+  }
+  .button1{
+    position: fixed;
+    top: 5vh;
+    right: 0em;
+  }
+  .button1 span {
+    right: 30%;
   }
 }
