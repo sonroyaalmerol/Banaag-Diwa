@@ -150,6 +150,10 @@ function back_to_top(){
   $(`#line${num_l_prev}`).animate({width: "0em"}, {
     duration: 1000
   });
+  $("#mobile8").addClass('mobile_deselected');
+  $("#mobile8").removeClass('mobile_selected');
+  $("#mobile0").removeClass('mobile_deselected');
+  $("#mobile0").addClass('mobile_selected');
 }
 
 
@@ -171,8 +175,6 @@ function dot_go_to(dot_num){
       duration: 1000
     });
   }
-  
-  
   if(dot_num === 0){
     $(".scrll_arrw").animate({opacity: "1"}, {
       duration: 1000
@@ -245,13 +247,15 @@ function nav_go_to(num){
       complete: function () {
           allowScroll = true;
       }
-  });
-  $(`#${num1}`).animate({opacity: "0"}, {
-    duration: 400
-  });
-  $(`#${num}`).animate({opacity: "1"}, {
-    duration: 1000
-  });
+  }); 
+  if(num != num1){
+    $(`#${num1}`).animate({opacity: "0"}, {
+      duration: 400
+    });
+    $(`#${num}`).animate({opacity: "1"}, {
+      duration: 1000
+    });
+  }
   
   if(num === 0){
     $(".scrll_arrw").animate({opacity: "1"}, {
