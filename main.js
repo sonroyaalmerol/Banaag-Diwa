@@ -150,8 +150,8 @@ function back_to_top(){
   $(`#line${num_l_prev}`).animate({width: "0em"}, {
     duration: 1000
   });
-  $("#mobile8").addClass('mobile_deselected');
-  $("#mobile8").removeClass('mobile_selected');
+  $("#mobile4").addClass('mobile_deselected');
+  $("#mobile4").removeClass('mobile_selected');
   $("#mobile0").removeClass('mobile_deselected');
   $("#mobile0").addClass('mobile_selected');
 }
