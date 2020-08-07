@@ -20,11 +20,11 @@
                 <div class="nav-scroller">
                     <nav class="nav d-flex">
                         <div class="logo">
-                            <img onclick="nav_go_to(0)" style="cursor: pointer;" src="sources/Logo BD_s.png" alt=""  width="40vh" height="auto">
+                            <img onclick="set_page(0)" style="cursor: pointer;" src="sources/Logo BD_s.png" alt=""  width="40vh" height="auto">
                         </div>
                         
                         
-                        <div onclick="nav_go_to(1)" class="scrll_arrw bounce" style="cursor: pointer;">
+                        <div onclick="set_page(1)" class="scrll_arrw bounce" style="cursor: pointer;">
                             <span class="scrll" id="scrll1">scroll</span>
                             <span class="scrll" id="scrll2">more</span>
                             <div class="arrow" id="arrow1"></div>
@@ -36,29 +36,29 @@
                         <span class="nav-title nav-bar">
                             
                             <span class="_line" id="line0"></span>
-                            <span onclick="nav_go_to(0)" style="cursor: pointer;">Home</span>
+                            <span onclick="set_page(0)" style="cursor: pointer;">Home</span>
                             <span class="_line" id="line1" style="margin-left: 2em;"></span>
-                            <span onclick="nav_go_to(1)" style="padding-left:2em;cursor: pointer;">About</span>
+                            <span onclick="set_page(1)" style="padding-left:2em;cursor: pointer;">About</span>
                             <span class="_line" id="line2" style="margin-left: 2em;"></span>
-                            <span onclick="nav_go_to(3)" style="padding-left:2em;cursor: pointer;">Prizes</span>
+                            <span onclick="set_page(3)" style="padding-left:2em;cursor: pointer;">Prizes</span>
                             <span class="_line" id="line3" style="margin-left: 2em;"></span>
-                            <span onclick="nav_go_to(4)" style="padding-left:2em;cursor: pointer;">Guidelines</span>
+                            <span onclick="set_page(4)" style="padding-left:2em;cursor: pointer;">Guidelines</span>
                             <span class="_line" id="line4" style="margin-left: 2em;"></span>
-                            <span onclick="nav_go_to(8)" style="padding-left:2em;cursor: pointer;">Submit</span>
+                            <span onclick="set_page(8)" style="padding-left:2em;cursor: pointer;">Submit</span>
                             
                         </span>
                         </div>
                         
                         
-                        <span class="dot" id="dot0" onclick="dot_go_to(0)"style="top: 30%"></span>
-                        <span class="dot" id="dot1" onclick="dot_go_to(1)"style="top: 35%"></span>
-                        <span class="dot" id="dot2" onclick="dot_go_to(2)"style="top: 40%"></span>
-                        <span class="dot" id="dot3" onclick="dot_go_to(3)"style="top: 45%"></span>
-                        <span class="dot" id="dot4" onclick="dot_go_to(4)"style="top: 50%"></span>
-                        <span class="dot" id="dot5" onclick="dot_go_to(5)"style="top: 55%"></span>
-                        <span class="dot" id="dot6" onclick="dot_go_to(6)"style="top: 60%"></span>
-                        <span class="dot" id="dot7" onclick="dot_go_to(7)"style="top: 65%"></span>
-                        <span class="dot" id="dot8" onclick="dot_go_to(8)" style="top: 70%"></span>
+                        <span class="dot" id="dot0" onclick="set_page(0)"style="top: 30%"></span>
+                        <span class="dot" id="dot1" onclick="set_page(1)"style="top: 35%"></span>
+                        <span class="dot" id="dot2" onclick="set_page(2)"style="top: 40%"></span>
+                        <span class="dot" id="dot3" onclick="set_page(3)"style="top: 45%"></span>
+                        <span class="dot" id="dot4" onclick="set_page(4)"style="top: 50%"></span>
+                        <span class="dot" id="dot5" onclick="set_page(5)"style="top: 55%"></span>
+                        <span class="dot" id="dot6" onclick="set_page(6)"style="top: 60%"></span>
+                        <span class="dot" id="dot7" onclick="set_page(7)"style="top: 65%"></span>
+                        <span class="dot" id="dot8" onclick="set_page(8)" style="top: 70%"></span>
                         
                     </nav>
                 </div>        
@@ -67,18 +67,18 @@
         
         <div class="mobile_nav" >
             <ul>
-            <li class="" onclick="nav_go_to(0)" id="mobile0">Home</li>
-            <li class="" onclick="nav_go_to(1)" id="mobile1">About</li>
-            <li class="" onclick="nav_go_to(3)" id="mobile2">Prizes</li>
-            <li class="" onclick="nav_go_to(4)" id="mobile3">Guidelines</li>
-            <li class="" onclick="nav_go_to(8)" id="mobile4">Submit</li>
+            <li class="" onclick="set_page(0)" id="mobile0">Home</li>
+            <li class="" onclick="set_page(1)" id="mobile1">About</li>
+            <li class="" onclick="set_page(3)" id="mobile2">Prizes</li>
+            <li class="" onclick="set_page(4)" id="mobile3">Guidelines</li>
+            <li class="" onclick="set_page(8)" id="mobile4">Submit</li>
             </ul>
             <div class="button1" id="hello">
             <span></span>
             </div>
         </div>
     <div class="container">
-        <div class="row" id="0" style="height: 95vh;">
+        <div class="row page-slide" id="0" style="height: 95vh;">
             <div class="col-8 hdr-title align-self-end">P<span class="hdr-title2">ANDEMYA</span></div>
             <div class="col-9 hdr-sub align-self-start" >SHORT STORIES&emsp;•&emsp;POEMS&emsp;•&emsp;PHOTO ESSAYS</div>
             
@@ -86,7 +86,7 @@
         </div>
     </div>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="1" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="1" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-title align-self-end" style="padding-left: 0.7em;">
                 Sexuality. Social Status. Race. Religion.
             </div>
@@ -99,7 +99,7 @@
         </div>
     </main>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="2" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="2" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-txt2 align-self-end" style="padding-left: 1.5em; ">
                 Contributors can now submit their works that depict this 
                 year’s theme,   
@@ -112,7 +112,7 @@
         </div>
     </main>
     <main role="main" class="container" >
-        <div class="row" id="3" style="height: 100vh; ">
+        <div class="row page-slide" id="3" style="height: 100vh; ">
             <div class="col-10 col-xl-7 bdy-txt2 align-self-end" style="padding-left: 1.5em;">
                 Top 3 short stories, poems, and photo essays will be awarded with cash prizes as follows:   
             </div>
@@ -126,7 +126,7 @@
                 
     </div>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="4" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="4" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-gdlns align-self-end" style="padding-left: 0.7em; margin-top: 15vh; padding-bottom: 3vh; ">
                 Guidelines
             </div>
@@ -137,7 +137,7 @@
         </div>
     </main>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="5" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="5" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-gdlns align-self-end" style="padding-left: 0.7em; margin-top: 15vh; padding-bottom: 3vh;">
                 Guidelines
             </div>
@@ -148,7 +148,7 @@
         </div>
     </main>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="6" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="6" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-gdlns align-self-end" style="padding-left: 0.7em; margin-top: 15vh; padding-bottom: 3vh;">
                 Guidelines
             </div>
@@ -159,7 +159,7 @@
         </div>
     </main>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="7" style="height: 100vh;">
+        <div class="row justify-content-start page-slide" id="7" style="height: 100vh;">
             <div class="col-10 col-xl-7 bdy-gdlns align-self-end" style="padding-left: 0.7em; margin-top: 15vh; padding-bottom: 3vh;">
                 Guidelines
             </div>
@@ -170,14 +170,14 @@
         </div>
     </main>
     <main role="main" class="container">
-        <div class="row justify-content-start" id="8" style="height: 100vh">
+        <div class="row justify-content-start page-slide" id="8" style="height: 100vh">
             <div class="col-10 col-xl-7 bdy-title sbmt-title align-self-end" >
                 Have what it takes?
             </div>
             <div class="col-10 col-xl-7 bdy-txt sbmt-txt align-self-start">
                 <button type="button" class="btn-sbmt"  >Submit an Entry</button>
                 <span class="bdy-txt btn-back2top">
-                    <a href="#0" style="color:white" onclick="back_to_top()">Back to top</a>
+                    <a href="#0" style="color:white" onclick="set_page(0)">Back to top</a>
                 </span>
             </div>
         </div>

@@ -6,6 +6,9 @@
   left: 6vw; 
   top: 10vh;
 }
+.page-slide {
+  opacity: 0;
+}
 .banaag1{
   position: fixed; left: 6vw; top: 10vh;
 }
