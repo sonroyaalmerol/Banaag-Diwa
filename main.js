@@ -410,13 +410,7 @@ document.addEventListener('touchend', function(event) {
 }, false); 
 
 function handleGesture() {
-    /*if (touchendY <= touchstartY) {
-        console.log('Swiped up');
-    }
-    if (touchendY >= touchstartY) {
-        console.log('Swiped down');
-    }*/
-    if (allowScroll) {
+    if (allowScroll && touchendY != touchstartY) {
       allowScroll = false;
       if (touchendY < touchstartY) {
           // downscroll code
@@ -424,9 +418,6 @@ function handleGesture() {
       } else if (touchendY > touchstartY) {
           // upscroll code
         upscroll_code();
-      }
-      else {
-        return 0;
       }
       $('html, body').animate({
           scrollTop: $(`#${num1}`).offset().top
