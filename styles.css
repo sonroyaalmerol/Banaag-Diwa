@@ -180,7 +180,12 @@
   line-height: 0.2em;
 }
 
-
+#scrll1{
+  display: block;
+}
+#scrll2{
+  display: none;
+}
 
 li{
   margin-bottom: 0.5em;
@@ -605,5 +610,12 @@ li{
   }
   .button1 span {
     right: 30%;
+  }
+  #scrll1{
+    display: none;
+  }
+  #scrll2{
+    display: block;
+    margin-left: -0.15em;
   }
 }
