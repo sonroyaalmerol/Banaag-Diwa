@@ -62,6 +62,7 @@ function nav_selection_update() {
     $(`#line${num_l}`).stop().animate({width: `${l_width}em`}, {
       duration: 1000
     });
+    $(`#mobile${num_l}`).addClass('mobile_selected');
   }
 }
 
@@ -80,6 +81,11 @@ function change_dot_selection(select, deselect) {
 }
 
 function set_page(page) {
+
+  //mobile nav
+  $(".mobile_nav").removeClass("active");
+  $(".button1").removeClass("btn");
+
   allowScroll = false;
 
   if (page > MAX_PAGES) {
