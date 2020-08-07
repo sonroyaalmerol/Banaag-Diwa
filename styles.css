@@ -619,5 +619,6 @@ li{
   }
   #scrll2{
     display: block;
+    margin-left: -0.05em;
   }
 }
