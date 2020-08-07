@@ -52,39 +52,10 @@ $(window).bind('mousewheel', function(event) {
         allowScroll = false;
         if (num0 < 0) {
             // downscroll code
-            num1++;
-            num2 = 1;
-            if (num1 === 1) {
-                $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-                    duration: 1000
-                });
-                banaagpresent = false;
-            }
-            if (num1 > 0) {
-              $(".scrll_arrw").animate({opacity: "0"}, {
-                duration: 500
-              });
-            }
-          
-            if (num1 > MAX_PAGES) {
-                num1 = MAX_PAGES;
-            }
+            downscroll_code();
         } else if (num0 > 0) {
             // upscroll code
-            num1--;
-            num2 = -1;
-            if (num1 === 0) {
-                $("#banaag").animate({left: "+=250px", opacity: "1"}, {
-                    duration: 1000
-                });
-                banaagpresent = true;
-                $(".scrll_arrw").animate({opacity: "1"}, {
-                  duration: 1000
-                });
-            }
-            if (num1 < 0){
-                num1 = 0;
-            }
+            upscroll_code();
         }
         $('html, body').animate({
             scrollTop: $(`#${num1}`).offset().top
@@ -213,7 +184,7 @@ function dot_go_to(dot_num){
       banaagpresent = true;
     }
   }
-  if(dot_num != 0){
+  else if(dot_num != 0){
     $(".scrll_arrw").animate({opacity: "0"}, {
       duration: 1000
     });
@@ -275,7 +246,6 @@ function nav_go_to(num){
           allowScroll = true;
       }
   });
-  
   $(`#${num1}`).animate({opacity: "0"}, {
     duration: 400
   });
@@ -294,7 +264,7 @@ function nav_go_to(num){
       banaagpresent = true;
     }
   }
-  if(num != 0){
+  else if(num != 0){
     $(".scrll_arrw").animate({opacity: "0"}, {
       duration: 1000
     });
@@ -387,13 +357,49 @@ $(document).ready(function() {
   });
 });
 
+
+
+function downscroll_code(){
+  num1++;
+  num2 = 1;
+  if (num1 === 1) {
+      $("#banaag").animate({left: "-=250px", opacity: "0"}, {
+          duration: 1000
+      });
+      banaagpresent = false;
+  }
+  if (num1 > 0) {
+    $(".scrll_arrw").animate({opacity: "0"}, {
+      duration: 500
+    });
+  }
+
+  if (num1 > MAX_PAGES) {
+      num1 = MAX_PAGES;
+  }
+}
+function upscroll_code(){
+  num1--;
+  num2 = -1;
+  if (num1 === 0) {
+      $("#banaag").animate({left: "+=250px", opacity: "1"}, {
+          duration: 1000
+      });
+      banaagpresent = true;
+      $(".scrll_arrw").animate({opacity: "1"}, {
+        duration: 1000
+      });
+  }
+  if (num1 < 0){
+      num1 = 0;
+  }
+}
 let touchstartY = 0;
 let touchendY = 0;
 
 document.addEventListener('touchstart', function(event) {
     touchstartY = event.changedTouches[0].screenY;
 }, false);
-
 document.addEventListener('touchend', function(event) {
     touchendY = event.changedTouches[0].screenY;
     handleGesture();
@@ -410,39 +416,13 @@ function handleGesture() {
       allowScroll = false;
       if (touchendY < touchstartY) {
           // downscroll code
-          num1++;
-          num2 = 1;
-          if (num1 === 1) {
-              $("#banaag").animate({left: "-=250px", opacity: "0"}, {
-                  duration: 1000
-              });
-              banaagpresent = false;
-          }
-          if (num1 > 0) {
-            $(".scrll_arrw").animate({opacity: "0"}, {
-              duration: 500
-            });
-          }
-        
-          if (num1 > MAX_PAGES) {
-              num1 = MAX_PAGES;
-          }
+        downscroll_code();
       } else if (touchendY > touchstartY) {
           // upscroll code
-          num1--;
-          num2 = -1;
-          if (num1 === 0) {
-              $("#banaag").animate({left: "+=250px", opacity: "1"}, {
-                  duration: 1000
-              });
-              banaagpresent = true;
-              $(".scrll_arrw").animate({opacity: "1"}, {
-                duration: 1000
-              });
-          }
-          if (num1 < 0){
-              num1 = 0;
-          }
+        upscroll_code();
+      }
+      else {
+        return 0;
       }
       $('html, body').animate({
           scrollTop: $(`#${num1}`).offset().top
