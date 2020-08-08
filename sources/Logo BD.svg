@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88"><defs><style>.cls-1,.cls-2{fill:#e7b089;}.cls-2{font-size:36px;font-family:PublicoText-Semibold, Publico Text;font-weight:600;letter-spacing:-0.08em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_2-2" data-name="Layer 2"><path class="cls-1" d="M75,13V75H13V13H75M88,0H0V88H88V0Z"/></g><g id="Layer_3" data-name="Layer 3"><text class="cls-2" transform="translate(20.37 56.14)">BD</text></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88 88" style="enable-background:new 0 0 88 88;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E7B089;}
+	.st1{enable-background:new    ;}
+</style>
+<g id="Layer_2_1_">
+	<g id="Layer_2-2">
+		<path class="st0" d="M75,13v62H13V13H75 M88,0H0v88h88V0z"/>
+	</g>
+	<g id="Layer_3">
+		<g class="st1">
+			<path class="st0" d="M21.4,54.8l1.4-0.3c1-0.2,1.3-0.4,1.3-2.4v-17c0-2-0.3-2.2-1.3-2.4l-1.4-0.3v-1.3h10.9c6,0,9.4,1.7,9.4,5.9
+				c0,3.3-2.3,5-6.5,5.7V43c5.1,0.5,7.7,2.3,7.7,6.2c0,4.6-3.5,7-9.7,7H21.4V54.8z M32,42.2c3.1,0,4.5-1.4,4.5-4.5
+				c0-3.9-1.4-4.8-4.5-4.8c-1,0-2,0.1-2.5,0.2v9.1H32z M37.4,49.4c0-4-1.4-5.3-5-5.3h-2.9v7.8c0,2.2,0.4,2.6,3.3,2.6
+				C35.6,54.4,37.4,53.3,37.4,49.4z"/>
+			<path class="st0" d="M42.3,54.8l1.4-0.3c1-0.2,1.3-0.4,1.3-2.4v-17c0-2-0.3-2.2-1.3-2.4l-1.4-0.3v-1.3H54
+				c7.3,0,12.6,3.3,12.6,12.1c0,8.4-5.1,12.8-12.8,12.8H42.3V54.8z M61,44.1c0-8.2-2.3-11.2-7.6-11.2c-1.5,0-2.5,0.1-3,0.3V51
+				c0,2.9,0.3,3.4,3.1,3.4C59.1,54.4,61,50.7,61,44.1z"/>
+		</g>
+	</g>
+</g>
+</svg>
