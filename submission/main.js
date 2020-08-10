@@ -22,7 +22,7 @@ $(document).ready(function() {
 });
 
 var banaagpresent = true;
-var _top = $(window).scrollTop();
+/*var _top = $(window).scrollTop();
 var _direction;
 $(window).scroll(function(){
     var _cur_top = $(window).scrollTop();
@@ -40,6 +40,24 @@ $(window).scroll(function(){
     }
     _top = _cur_top;
     console.log(_direction);
+});*/
+
+var distance = $(".logo").offset().top,
+    $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= distance && banaagpresent == false) {
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 300
+      });
+      banaagpresent = true;
+    }
+    else{
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 300
+      });
+      banaagpresent = true;
+    }
 });
 
 function upload_details(file_num){
