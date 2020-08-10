@@ -159,8 +159,8 @@ input[type=submit]:hover {
     .title{
         font-size: 2.5em;
         line-height: 1.5em;
-        padding-left: -0.3em;
-        text-align: left;
+        padding-left: 0em;
+        text-align: right;
     }
     .covid{
         position:absolute;
