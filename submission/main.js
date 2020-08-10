@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
     $('#submission').bind('change', function() {
         //var sub_elements = $('div.sub_type').children().hide(); // hide all the elements
@@ -9,14 +11,27 @@ $(document).ready(function() {
         /*if (sub_value.length) { // if somethings' selected
             sub_elements.filter('.' + sub_value).show(); // show the ones we want
         }*/
-        if (sub_value.length){
+        if (sub_value.length){    // if somethings' selected
           $('#docus').show();
           $('#sbmt_btn').show();
-          //reset value of f_2
+          document.getElementById("submission").style.color = "white";
           if(sub_value == "photo_essay"){
             $('#imgs').show();
           }
         }
+
+    }).trigger('change');
+});
+$(document).ready(function() {
+    $('#yrlvl').bind('change', function() {
+      var sub_value2 = $(this).val();
+  
+      /*if (sub_value.length) { // if somethings' selected
+          sub_elements.filter('.' + sub_value).show(); // show the ones we want
+      }*/
+      if (sub_value2.length){
+        document.getElementById("yrlvl").style.color = "white";
+      }
 
     }).trigger('change');
 });
