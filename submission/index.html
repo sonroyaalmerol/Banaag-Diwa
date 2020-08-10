@@ -5,45 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Banaag Diwa</title>
+<link rel="icon" href="../sources/Logo BD.svg">
+<link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
 
-input[type=text], select, textarea, input[type=email] {
-  width: 100%;
-  padding: 12px;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 0.05em solid #233342;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
 </style>
 <!--
 <script>
@@ -57,147 +26,70 @@ input[type=submit]:hover {
 -->
 
 </head>
-<body>
+<body style="background-color: #233342;">
+  
+  <img src="../sources/Concept-1.gif" class="covid" alt=""></img>
 
-<h3>Submission Form</h3>
-
-<div class="container col-12">
-  <form action="/action_page.php">
-    <div class="col-12">
-    <!--<label for="fullname">Full Name</label>-->
-    <input type="text" id="fullname" name="fullname" placeholder="Full Name">
-    </div>
-    
-    <div class="col-12">
-    <!--<label for="email">Email</label>-->
-    <input type="email" id="email" name="email" placeholder="Email">
-    </div>
-
-    <div class="col-12">
-      <!--<label for="yrlvl">Course</label>-->
-      <select id="yrlvl" name="yrlvl">
-        <option value="" disabled selected>-Yr. Level-</option>
-        <option value="1">1st Year</option>
-        <option value="2">2nd Year</option>
-        <option value="3">3rd Year</option>
-        <option value="4">4th Year</option>
-        <option value="5">5th Year</option>
-      </select>
-    </div>
-    
-    <div class="col-12">
-      <select size="1" id="dept" title="" name="dept">
-        <option value="">-Department-</option>
-        <option value="sas">School of Arts and Sciences</option>
-        <option value="sbg">School of Business and Governance</option>
-        <option value="son">School of Nursing</option>
-        <option value="sea">School of Engineering and Architecture</option>
-        <option value="soe">School of Education</option>
-      </select>
-      
-      <!--<div class="department">
-          <div class="sas">
-            School of Arts and Sciences
-          </div>
-          <div class="sbg">
-            School of Business and Governance
-          </div>
-          <div class="son">
-            School of Nursing
-          </div>
-          <div class="sea">
-            School of Engineering and Architecture
-          </div>
-          <div class="soe">
-            School of Education
-        </div>
-      </div>-->
-      
-      <div class="department">
-          <div class="sas">
-              <select>
-                  <option value="">-Course-</option>
-                  <option value="com_sci">Computer Science</option>
-                  <option value="info_sys">Information Systems</option>
-                  <option value="lla">Language, Literature and Arts</option>
-                  <option value="mass_comm">Mass Communication</option>
-                  <option value="philo">Philosophy</option>
-                  <option value="theo">Theology</option>
-                  <option value="bio">Biology</option>
-                  <option value="chem">Chemistry</option>
-                  <option value="envi_sci">Environmental Science</option>
-                  <option value="islamic_stud">Islamic Studies</option>
-                  <option value="math">Math</option>
-                  <option value="p6">Physics</option>
-                  <option value="econ">Economics</option>
-                  <option value="international_stud">International Studies</option>
-                  <option value="pol_sci">Political Science and History</option>
-                  <option value="psych">Psychology</option>
-                  <option value="soc_work">Social Work</option>
-                  <option value="socio">Sociology</option>
-                  <option value="data_sci">Data Science</option>
-              </select>
-          </div>
-          <div class="sbg">
-              <select>
-                <option value="">-Course-</option>
-                <option value="accountancy">Accountancy</option>
-                <option value="accounting_tech">Accounting Technology</option>
-                <option value="entrep">Entrepeneurship</option>
-                <option value="entrep_agri">Entrepeneurship in Agri-Business</option>
-                <option value="finance">Finance</option>
-                <option value="hrm">Human Resource Management</option>
-                <option value="bus_mgmt">Business Management</option>
-                <option value="marketing">Marketing</option>
-                <option value="governance">Governance</option>
-              </select>
-          </div>
-          <div class="son">
-              <select>
-                <option value="nursing">Nursing</option>
-              </select>
-          </div>
-          <div class="sea">
-              <select>
-                <option value="">-Course-</option>
-                <option value="archi">Architecture</option>
-                <option value="che">Chemical Engineering</option>
-                <option value="ce">Civil Engineering</option>
-                <option value="cpe">Computer Engineering</option>
-                <option value="ee">Electrical Engineering</option>
-                <option value="ece">Electronics Engineering</option>
-                <option value="esm">Engineering Sciences and Math</option>
-                <option value="ie">Industrial Engineering</option>
-                <option value="me">Mechanical Engineering</option>
-              </select>
-          </div>
-          <div class="soe">
-              <select>
-                <option value="eld">Educational Leadership</option>
-                <option value="tchr_ed">Teacher Education</option>
-                <option value="pe">Physical Education</option>
-              </select>
-          </div>
+  <div class="logo">
+    <img style="cursor: pointer;" src="../sources/Logo BD.svg" alt=""  width="40vh" height="40vh">
+  </div>
+  <span class="banaag1" id="banaag" style=" position: fixed;">B<span style="font-size: 0.75em; letter-spacing: 0.3em;">ANAAG</span> D<span style="font-size: 0.75em; letter-spacing: 0.3em;">IWA</span></span>
+  
+  <div class="form-popup col-12 col-lg-6" id="forms">
+    <form action="" class="form-container" onsubmit="return Validate(this);">
+      <span style="font-family: PublicoText; font-size: 3em; color:#fff; padding-left: 0.3em;">Submission Form</span>
+      <div class="col-12 f_container" style="margin-top: 0.5em;">
+      <!--<label for="fullname">Full Name</label>-->
+      <input type="text" id="fullname" name="fullname" placeholder="Full Name">
       </div>
-    </div>
+      
+      <div class="col-12 f_container">
+      <!--<label for="email">Email</label>-->
+      <input type="email" id="email" name="email" placeholder="Email">
+      </div>
 
+      <div class="col-12 f_container">
+        <input type="text" id="course" name="course" placeholder="Course">
+      </div>
 
+      <div class="col-12 f_container">
+        <!--<label for="yrlvl">Course</label>-->
+        <select id="yrlvl" name="yrlvl" style="cursor: pointer;">
+          <option value="" disabled selected>-Yr. Level-</option>
+          <option class="dropdown_item" value="1">1st Year</option>
+          <option class="dropdown_item" value="2">2nd Year</option>
+          <option class="dropdown_item" value="3">3rd Year</option>
+          <option class="dropdown_item" value="4">4th Year</option>
+          <option class="dropdown_item" value="5">5th Year</option>
+        </select>
+      </div>
 
-    <div class="col-12">
-      <input type="file" id="myFile">
-    </div>
+      <div class="col-12 f_container">
+        <select size="1" id="submission" title="" name="sub_type" style="cursor: pointer;">
+          <option class="dropdown_item" value=""disabled selected>-Submission Category-</option>
+          <option class="dropdown_item" value="poems">Poems</option>
+          <option class="dropdown_item" value="shrt_stry">Short Stories</option>
+          <option class="dropdown_item" value="photo_essay">Photo Essay</option>
+        </select>
+        
+        <div id="docus" style="margin-top: 1em;">
+          <input  type="file" name="uploadfile" id="f_1" style="display:none;" multiple size="10" onchange="upload_details(1)"/>
+          <label class="upload_file" for="f_1">Upload Documents</label>
+          <span class="output_list" id="output_1"></span>
+        </div>
+        <div id="imgs">
+          <input type="file" name="uploadimg" id="f_2" style="display:none;" multiple size="10" onchange="upload_details(2)"/>
+          <label class="upload_file" for="f_2" >Upload Images</label>
+          <span class="output_list" id="output_2"></span>
+        </div>
+        <div id="sbmt_btn">
+          <input type="submit" value="Submit">
+        </div>
+      </div>
 
-    <div class="col-12">
-      <form action="/action_page.php">
-        <label for="img">Select image:</label>
-        <input type="file" id="img" name="img" accept="image/*">
-      </form>
-    </div>
+    </form>
+  </div>
 
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
 
 
 
