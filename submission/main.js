@@ -28,13 +28,13 @@ $(window).scroll(function(){
     var _cur_top = $(window).scrollTop();
     if(_top < _cur_top && banaagpresent == true){
       $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
-        duration: 1000
+        duration: 300
       });
       banaagpresent = false;
     }
     else if(_top > _cur_top && banaagpresent == false) {
       $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-        duration: 1000
+        duration: 300
       });
       banaagpresent = true;
     }
