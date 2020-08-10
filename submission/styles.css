@@ -185,7 +185,9 @@ input[type=submit]:hover {
         margin-top: 2.8em;
         width: 100%;
     }
-    
+    .upload_file{
+        line-height: 2.25em;
+    }
 
 }
 
