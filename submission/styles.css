@@ -178,8 +178,8 @@ input[type=submit]:hover {
         text-align: center;
         top: 38vh;
     }
-    .f_container{
-        left: 0;
+    .buttons{
+        text-align: left;
     }
     
 
