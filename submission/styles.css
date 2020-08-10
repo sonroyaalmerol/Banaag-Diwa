@@ -162,6 +162,13 @@ input[type=submit]:hover {
         line-height: 3em;
          
     }
+    .covid{
+        position:absolute;
+        top: 30%;
+        justify-self: center;
+        width: 70vw;
+        height: auto;
+    }
 
 }
 
