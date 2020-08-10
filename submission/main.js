@@ -53,10 +53,10 @@ $window.scroll(function() {
       banaagpresent = true;
     }
     else{
-      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
         duration: 300
       });
-      banaagpresent = true;
+      banaagpresent = false;
     }
 });
 
