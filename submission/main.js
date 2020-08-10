@@ -21,6 +21,26 @@ $(document).ready(function() {
     }).trigger('change');
 });
 
+var banaagpresent = true;
+var _top = $(window).scrollTop();
+var _direction;
+$(window).scroll(function(){
+    var _cur_top = $(window).scrollTop();
+    if(_top < _cur_top && banaagpresent == true){
+      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
+        duration: 1000
+      });
+      banaagpresent = false;
+    }
+    else if(_top > _cur_top && banaagpresent == false) {
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 1000
+      });
+      banaagpresent = true;
+    }
+    _top = _cur_top;
+    console.log(_direction);
+});
 
 function upload_details(file_num){
     var x = document.getElementById(`f_${file_num}`);
