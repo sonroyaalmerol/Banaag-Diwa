@@ -157,10 +157,9 @@ input[type=submit]:hover {
         top: 5vh;
     }
     .title{
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 1.5em;
         padding-left: 0em;
-        justify-self: start;
     }
     .covid{
         position:absolute;
