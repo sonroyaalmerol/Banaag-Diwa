@@ -46,17 +46,17 @@ var distance = $(".logo").offset().top,
     $window = $(window);
 
 $window.scroll(function() {
-    if ( $window.scrollTop() >= distance && banaagpresent == false) {
-      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-        duration: 300
-      });
-      banaagpresent = true;
-    }
-    else if ( $window.scrollTop() < distance && banaagpresent == true) {
+    if ( $window.scrollTop() >= distance && banaagpresent == true) {
       $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
         duration: 300
       });
       banaagpresent = false;
+    }
+    else if ( $window.scrollTop() < distance && banaagpresent == false) {
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 300
+      });
+      banaagpresent = true;
     }
 });
 
