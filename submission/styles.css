@@ -1,3 +1,7 @@
+@font-face { font-family: PublicoText; src: url('Publico/PublicoText-Roman.otf'); } 
+@font-face { font-family: PublicoText; font-weight: bold; src: url('Publico/PublicoText-Bold.otf');}
+
+
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -40,6 +44,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
     right: 10%;
     top: 20%;
 }
+.title{
+    font-family: PublicoText; font-size: 3em; color:#fff; padding-left: 0.3em;
+}
+
 input[type=submit] {
   /*background-color: #E7B089;
   color: #000;*/
@@ -140,5 +148,21 @@ input[type=submit]:hover {
     background-color: #233342;
     outline: none;
 }
+
+@media screen and (max-width: 1081px) {
+    .logo{
+        top: 5vh;
+    }
+    .banaag1{
+        position: fixed;
+        top: 5vh;
+    }
+    .title{
+        font-size: 2em;
+        
+    }
+
+}
+
 
 
