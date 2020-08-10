@@ -164,7 +164,7 @@ input[type=submit]:hover {
     .covid{
         position:absolute;
         top: 15%;
-        justify-self: center;
+        text-align: center;
         width: 70vw;
         height: auto;
         margin-left: auto;
