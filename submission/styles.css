@@ -173,7 +173,9 @@ input[type=submit]:hover {
         margin-right: 10%;
     }
     .forms {
-        left: 0;
+        right: auto;
+        left: auto;
+        text-align: center;
         top: 38vh;
     }
     
