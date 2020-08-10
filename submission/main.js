@@ -52,7 +52,7 @@ $window.scroll(function() {
       });
       banaagpresent = true;
     }
-    else{
+    else if ( $window.scrollTop() < distance && banaagpresent == true) {
       $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
         duration: 300
       });
