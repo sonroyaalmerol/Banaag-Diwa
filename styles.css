@@ -13,22 +13,11 @@
   position: fixed; left: 6vw; top: 10vh;
 }
 .covid {
-    /* The image used */
-    /*background-image: url('sources/Concept\ 1.png');*/
     position: fixed;
-    /*width: 30.03vw;
-    height: auto;*/
     width: auto;
     height: 70vh;
     right: 10%;
     top: 20%;
-  
-  
-    /* Create the parallax scrolling effect */
-    /*background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
 }
 
 .nav-title{
@@ -217,6 +206,7 @@ li{
   color: #E7B089;
   background-color: #233342;
   border: 2px solid #E7B089;
+  border-radius: 0.1em;
   width: 13em; height: 4em;
   /*border-color: #E7B089;*/
 }
