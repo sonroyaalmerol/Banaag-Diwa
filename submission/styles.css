@@ -163,14 +163,14 @@ input[type=submit]:hover {
     }
     .covid{
         position:absolute;
-        top: 20%;
+        top: 15%;
         justify-self: center;
         width: 70vw;
         height: auto;
     }
     .forms {
         left: 0;
-        top: 20%;
+        top: 20vh;
     }
     
 
