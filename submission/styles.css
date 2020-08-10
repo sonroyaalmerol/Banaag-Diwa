@@ -160,11 +160,13 @@ input[type=submit]:hover {
         font-size: 2.5em;
         line-height: 3em;
         padding-left: 0.5em;
+        margin-bottom: -1em;
     }
     .covid{
         position:absolute;
         top: 15%;
         right: auto;
+        left: auto;
         text-align: center;
         width: 70vw;
         height: auto;
