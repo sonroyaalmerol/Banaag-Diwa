@@ -58,9 +58,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     font-family: PublicoText; font-size: 3em; color:#fff; padding-left: 0.3em;
 }
 
-
-
-  
   
 .forms {
     display: block;
@@ -89,10 +86,27 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container select, .form-container textarea, .form-container input[type=email] {
+.form-container input[type=text], .form-container textarea, .form-container input[type=email] {
 
     width: 100%;
     padding: 0.5em;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0.05em solid white;
+    color: white;
+    background-color: #233342;
+    box-sizing: border-box;
+    /*margin-top: 2px;
+    margin-bottom: 10px;*/
+    resize: vertical;
+}
+.form-container select{
+    width: 100%;
+    padding-left: 0.3em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -110,6 +124,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     background-color: #233342;
     outline: none;
 }
+
 
 input[type=submit] {
   /*background-color: #E7B089;
