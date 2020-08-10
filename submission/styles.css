@@ -162,8 +162,9 @@ input[type=submit]:hover {
          
     }
     .covid{
+        display:none;
         position:absolute;
-        top: 30%;
+        top: 20%;
         justify-self: center;
         width: 70vw;
         height: auto;
