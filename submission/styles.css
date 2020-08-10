@@ -160,7 +160,7 @@ input[type=submit]:hover {
         font-size: 2em;
         line-height: 1.5em;
         padding-left: 0em;
-        align-self: left;
+        justify-self: start;
     }
     .covid{
         position:absolute;
