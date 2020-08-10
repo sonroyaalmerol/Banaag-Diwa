@@ -21,14 +21,9 @@ $(document).ready(function() {
         }
 
     }).trigger('change');
-});
-$(document).ready(function() {
     $('#yrlvl').bind('change', function() {
       var sub_value2 = $(this).val();
-  
-      /*if (sub_value.length) { // if somethings' selected
-          sub_elements.filter('.' + sub_value).show(); // show the ones we want
-      }*/
+      
       if (sub_value2.length){
         document.getElementById("yrlvl").style.color = "white";
       }
@@ -37,26 +32,6 @@ $(document).ready(function() {
 });
 
 var banaagpresent = true;
-/*var _top = $(window).scrollTop();
-var _direction;
-$(window).scroll(function(){
-    var _cur_top = $(window).scrollTop();
-    if(_top < _cur_top && banaagpresent == true){
-      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
-        duration: 300
-      });
-      banaagpresent = false;
-    }
-    else if(_top > _cur_top && banaagpresent == false) {
-      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-        duration: 300
-      });
-      banaagpresent = true;
-    }
-    _top = _cur_top;
-    console.log(_direction);
-});*/
-
 var distance = $(".logo").offset().top,
     $window = $(window);
 
