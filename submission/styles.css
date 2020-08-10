@@ -181,10 +181,8 @@ input[type=submit]:hover {
     .buttons{
         text-align: left;
     }
-    #sbmt_btn{
-        margin-top: 0.5em;
-    }
     input[type=submit] {
+        margin-top: 2em;
         width: 100%;
     }
     
