@@ -16,16 +16,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #adadad;
+    color: #969696;
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #adadad;
+    color: #969696;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #adadad;
+    color: #969696;
 }
 
 
@@ -166,6 +166,7 @@ input[type=submit]:hover {
     cursor: pointer;
     margin-top: 0.5em;
     margin-left: 0em;
+    font-size: smaller;
 }
 .upload_file:hover{
     background-color: #1b2733;
