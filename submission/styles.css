@@ -183,6 +183,8 @@ input[type=submit]:hover {
     }
     #sbmt_btn{
         margin-top: 0.5em;
+    }
+    input[type=submit] {
         width: 100%;
     }
     
