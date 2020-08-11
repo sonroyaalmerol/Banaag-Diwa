@@ -6,7 +6,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 2em #1c2936 inset !important;
+    -webkit-box-shadow: 0 0 0 5em #1c2936 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
@@ -82,6 +83,7 @@ input:-webkit-autofill {
     /*margin-top: 2px;
     margin-bottom: 10px;*/
     resize: vertical;
+    border-radius: 0.3em;
 }
 
 /* When the inputs get focus, do something */
