@@ -534,7 +534,7 @@ li{
     position: fixed;
     top: 5vh;
   }
-  .covid{
+  .carousel{
     position:absolute;
     top: 30%;
     justify-self: center;
