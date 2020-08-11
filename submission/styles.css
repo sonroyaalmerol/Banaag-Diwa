@@ -53,11 +53,11 @@ input:-webkit-autofill {
     left: 0vw;
     top: 10vh;
     border: 3px solid red;
-    width: 100%;
     margin-top: 10vh;
 }
 
 .f_container {
+    position: relative;
     background-color: none;
     margin-top: 1em;
     width: 100%;
@@ -93,7 +93,7 @@ input:-webkit-autofill {
 }
 
 .f_line{
-    left: 1em;
+    left: 0;
     top: 50px;
     height: 0.1em;
     /*width: 94.8%;*/
