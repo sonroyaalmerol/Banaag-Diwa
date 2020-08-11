@@ -6,7 +6,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px #233342 inset !important;
+    -webkit-box-shadow: 0 0 0 2em #233342 inset !important;
 }
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
@@ -14,19 +14,6 @@ input:-webkit-autofill {
 
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #969696;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #969696;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: #969696;
-}
 
 
 .logo{
@@ -76,13 +63,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
     max-width: 100vw;
     justify-self: center;
     margin-top: 10vh;
-    border-radius: 1%;
 }
 
 .f_container {
-    border-radius: 5px;
     background-color: none;
     padding-bottom: 1em;
+    width: 100%;
 }
 
 /* Full-width input fields */
@@ -96,9 +82,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 0.05em solid white;
+    border-bottom: 0.5em;
+    /*border-bottom: 0.05em solid white;*/
     color: white;
-    background-color: #233342;
+    background-color: #1c2936;
+    /*background-color: #233342;*/
     box-sizing: border-box;
     /*margin-top: 2px;
     margin-bottom: 10px;*/
@@ -113,9 +101,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 0.05em solid white;
+    border-bottom: 0;
+    /*border-bottom: 0.05em solid white;*/
     color: white;
-    background-color: #233342;
+    background-color: #1c2936;
+    /*background-color: #233342;*/
     box-sizing: border-box;
     /*margin-top: 2px;
     margin-bottom: 10px;*/
@@ -123,9 +113,20 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=email]:focus, select {
+.form-container input[type=text]:focus, .form-container input[type=email]:focus, select:focus {
     background-color: #304659;
+    /*background-color: #304659;*/
     outline: none;
+}
+
+.f_line{
+    left: 1em;
+    top: 2.70em;
+    height: 0.1em;
+    /*width: 94.8%;*/
+    border-bottom: 0.2em solid #E7B089;
+    position: absolute;
+    z-index: 1;
 }
 
 
@@ -150,6 +151,8 @@ input[type=submit]:hover {
   /*background-color: #17212b;*/
   background-color: #ba8d6e;
 }
+
+
 .dropdown_item{
     color: white;
 }
