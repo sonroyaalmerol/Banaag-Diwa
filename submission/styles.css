@@ -12,8 +12,8 @@ input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+/*body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}*/
 
 
 .logo{
@@ -46,62 +46,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
   
-.forms {
-    display: block;
-    position: fixed;
-    left: 10vw;
-    top: 10vh;
-    /*border: 3px solid red;
-    background-color: white;*/
-    z-index: 9;
-    width: 100vw;
-    height: auto;
-}
 
 /* Add styles to the form container */
 .form-container {
-    max-width: 100vw;
-    justify-self: center;
+    position: fixed;
+    left: 0vw;
+    top: 10vh;
+    border: 3px solid red;
+    width: 100%;
     margin-top: 10vh;
 }
 
 .f_container {
     background-color: none;
-    padding-bottom: 1em;
+    margin-top: 1em;
     width: 100%;
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container textarea, .form-container input[type=email] {
+.form-container input[type=text], .form-container textarea, .form-container input[type=email], .form-container select {
 
     width: 100%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 0.5em;
-    /*border-bottom: 0.05em solid white;*/
-    color: white;
-    background-color: #1c2936;
-    /*background-color: #233342;*/
-    box-sizing: border-box;
-    /*margin-top: 2px;
-    margin-bottom: 10px;*/
-    resize: vertical;
-}
-.form-container select{
-    width: 100%;
-    padding-left: 0.3em;
-    padding-right: 0.5em;
-    padding-top: 0.8em;
-    padding-bottom: 0.5em;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
     /*border-bottom: 0.05em solid white;*/
     color: white;
     background-color: #1c2936;
@@ -121,12 +94,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .f_line{
     left: 1em;
-    top: 2.70em;
+    top: 50px;
     height: 0.1em;
     /*width: 94.8%;*/
     border-bottom: 0.2em solid #E7B089;
     position: absolute;
     z-index: 1;
+    
 }
 
 
@@ -187,8 +161,8 @@ input[type=submit]:hover {
 
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label{
-  top: 0em;
-  left: 2em;
+  top: 5px;
+  left: 15px;
   opacity: 1;
   font-size: x-small;
 }
