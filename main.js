@@ -145,6 +145,9 @@ function set_page(page) {
 
 
 $(document).ready(function() {
+  $('.carousel').carousel({
+    interval: 10000
+  });
   // mobile nav
   $(".button1").click(function() {
     $(".mobile_nav").toggleClass("active");
