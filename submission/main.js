@@ -23,7 +23,6 @@ $(document).ready(function() {
         }
 
     }).trigger('change');
-    
 });
 $(document).ready(function() {
     $('#yrlvl').bind('change', function() {
@@ -37,6 +36,25 @@ $(document).ready(function() {
 
     }).trigger('change');
 });
+
+function line_in(f_number) {
+    $(`#line${f_number}`).stop().animate({width: "94.8%"}, {
+      duration: 300
+    });
+}
+function line_out(f_number) {
+  $(`#line${f_number}`).stop().animate({width: "0%"}, {
+    duration: 300
+  });
+}
+/*
+$(document).ready(function() {
+  if ($("#email").is(":focus")) {
+    $(`#line1`).stop().animate({width: "94.8%"}, {
+      duration: 300
+    });
+  }
+});*/
 
 var banaagpresent = true;
 var distance = $(".logo").offset().top,
