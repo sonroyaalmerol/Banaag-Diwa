@@ -54,6 +54,7 @@ input:-webkit-autofill {
     top: 10vh;
     /*border: 3px solid red;*/
     margin-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .f_container {
