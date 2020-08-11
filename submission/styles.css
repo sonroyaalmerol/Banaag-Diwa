@@ -93,14 +93,12 @@ input:-webkit-autofill {
 }
 
 .f_line{
-    left: 1em;
-    top: 50px;
-    height: 0.1em;
+    width:0;
+    top: -15px;
+    height: 0.2em;
     /*width: 94.8%;*/
     border-bottom: 0.2em solid #E7B089;
-    position: absolute;
-    z-index: 1;
-    
+    position: relative;
 }
 
 
