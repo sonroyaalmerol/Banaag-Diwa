@@ -1,6 +1,9 @@
 
 
 $(document).ready(function() {
+    $('.carousel').carousel({
+      interval: 10000
+    });
     $('#submission').bind('change', function() {
         //var sub_elements = $('div.sub_type').children().hide(); // hide all the elements
         $('#docus').hide();
