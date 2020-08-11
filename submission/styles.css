@@ -95,10 +95,11 @@ input:-webkit-autofill {
 
 .f_line{
     left: 0;
-    top: 50px;
+    top: 49px;
     height: 0.1em;
     /*width: 94.8%;*/
     border-bottom: 0.2em solid #E7B089;
+    border-radius: 0 0 0.3em 0.3em;
     position: absolute;
     z-index: 1;
     
