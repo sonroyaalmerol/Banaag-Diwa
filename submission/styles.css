@@ -41,6 +41,14 @@ input:-webkit-autofill {
     right: 10%;
     top: 20%;
 }
+.carousel.carousel-fade .carousel-item {
+  display: block;
+  opacity: 0;
+  transition: opacity ease-out 1s;
+}
+.carousel.carousel-fade .carousel-item.active {
+  opacity: 1 !important;
+}
 .title{
     font-family: PublicoText; font-size: 3em; color:#fff;
 }
