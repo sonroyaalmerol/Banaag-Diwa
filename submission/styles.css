@@ -185,7 +185,7 @@ input:not(:focus):valid ~ .floating-label{
   left: 1.5em;
   opacity: 1;
   font-size: x-small;
-  color: white;
+  color: #969696;
 }
 
 .floating-label {
