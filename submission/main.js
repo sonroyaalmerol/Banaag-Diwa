@@ -16,7 +16,7 @@ $(document).ready(function() {
           $('#sbmt_btn').show();
           document.getElementById("submission").style.color = "white";
           document.getElementById("floating_subtype").setAttribute(
-            "style", "top: 5px; left: 15px; opacity: 1; font-size: x-small;");
+            "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
           if(sub_value == "photo_essay"){
             $('#imgs').show();
           }
@@ -31,7 +31,7 @@ $(document).ready(function() {
       if (sub_value2.length){
         document.getElementById("yrlvl").style.color = "white";
         document.getElementById("floating_yrlvl").setAttribute(
-          "style", "top: 5px; left: 15px; opacity: 1; font-size: x-small;");
+          "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
       }
 
     }).trigger('change');
