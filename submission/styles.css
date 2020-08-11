@@ -204,7 +204,7 @@ input:not(:focus):valid ~ .floating-label{
         margin-left: 10%;
         margin-right: 10%;
     }
-    .forms {
+    .form-container {
         right: auto;
         left: auto;
         text-align: center;
