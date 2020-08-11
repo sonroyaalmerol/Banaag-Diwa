@@ -18,6 +18,15 @@
     height: 70vh;
     right: 10%;
     top: 20%;
+    z-index: -100;
+}
+.carousel.carousel-fade .carousel-item {
+  display: block;
+  opacity: 0;
+  transition: opacity ease-out 1s;
+}
+.carousel.carousel-fade .carousel-item.active {
+  opacity: 1 !important;
 }
 
 .nav-title{
