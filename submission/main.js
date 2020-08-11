@@ -21,14 +21,17 @@ $(document).ready(function() {
         }
 
     }).trigger('change');
-    $('#yrlvl').bind('change', function() {
-      var sub_value2 = $(this).val();
-      
-      if (sub_value2.length){
-        document.getElementById("yrlvl").style.color = "white";
-      }
+    
+});
+$(document).ready(function() {
+  $('#yrlvl').bind('change', function() {
+    var sub_value2 = $(this).val();
+    
+    if (sub_value2.length){
+      document.getElementById("yrlvl").style.color = "white";
+    }
 
-    }).trigger('change');
+  }).trigger('change');
 });
 
 var banaagpresent = true;
