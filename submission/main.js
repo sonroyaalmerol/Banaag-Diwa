@@ -15,6 +15,8 @@ $(document).ready(function() {
           $('#docus').show();
           $('#sbmt_btn').show();
           document.getElementById("submission").style.color = "white";
+          document.getElementById("floating_subtype").setAttribute(
+            "style", "top: -0.5em; left: 1.5em; opacity: 1; font-size: x-small;");
           if(sub_value == "photo_essay"){
             $('#imgs').show();
           }
@@ -24,14 +26,16 @@ $(document).ready(function() {
     
 });
 $(document).ready(function() {
-  $('#yrlvl').bind('change', function() {
-    var sub_value2 = $(this).val();
-    
-    if (sub_value2.length){
-      document.getElementById("yrlvl").style.color = "white";
-    }
+    $('#yrlvl').bind('change', function() {
+      var sub_value2 = $(this).val();
+      
+      if (sub_value2.length){
+        document.getElementById("yrlvl").style.color = "white";
+        document.getElementById("floating_yrlvl").setAttribute(
+          "style", "top: -0.5em; left: 1.5em; opacity: 1; font-size: x-small;");
+      }
 
-  }).trigger('change');
+    }).trigger('change');
 });
 
 var banaagpresent = true;
