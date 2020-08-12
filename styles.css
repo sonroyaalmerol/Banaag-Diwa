@@ -54,15 +54,11 @@
 
 .hdr-title{
   position: relative;
-  /*left: 6.88%;
-  top: 42.92%;*/
   margin-left: 6%;
   
   font-family: PublicoText;
   font-style: normal;
   font-weight: bold;
-  /*font-size: 80px;
-  line-height: 80px;*/
   font-size: 5em;
   line-height: 1em;
   letter-spacing: 0.3em;
@@ -77,19 +73,14 @@
 
 .hdr-sub{
   position: relative;
-  /*left: 8.44%;
-  top: 55.28%;*/
   margin-left: 8%;
 
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
-  /*font-size: 20px;
-  line-height: 24px;*/
   font-size: 1.2em;
   line-height: 1.2em;
 
-  /* identical to box height */
 
 
   color: #FFFFFF;
@@ -217,7 +208,6 @@ li{
   border: 2px solid #E7B089;
   border-radius: 0.1em;
   width: 13em; height: 4em;
-  /*border-color: #E7B089;*/
 }
 .btn-sbmt:focus,
 .btn-sbmt:active:focus,
@@ -274,9 +264,6 @@ li{
   display: inline-block;
   cursor: pointer;
 }
-/*.is-selected{
-  background-color: red;
-}*/
 .is-selected {
   animation: anim_s 1s;
   animation-fill-mode: forwards;
@@ -359,46 +346,36 @@ li{
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 3.2em;*/
-  /*width: 3.5em;*/
-  /*width: 3.6em;*/
-  /*width: 6.6em;*/
-  /*width: 4.2em;*/
 }
 ._line0{
   height:2.5em;
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 3.2em;*/
 }
 ._line1{
   height:2.5em;
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 3.5em;*/
 }
 ._line2{
   height:2.5em;
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 3.6em;*/
 }
 ._line3{
   height:2.5em;
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 6.6em;*/
 }
 ._line4{
   height:2.5em;
   border-bottom: 0.1em solid #E7B089;
   top: 10vh;
   position: fixed;
-  /*width: 4.2em;*/
 }
 .header .menu-btn {
   display: none;
@@ -441,7 +418,6 @@ li{
 }
 
 .button1 {
-  /*background: #bb0000;*/
   width: 5em;
   height: 3em;
   position: absolute;
@@ -534,13 +510,6 @@ li{
     position: fixed;
     top: 5vh;
   }
-  /*.carousel{
-    position:absolute;
-    top: 30%;
-    justify-self: center;
-    width: 70%;
-    height: auto;
-  }*/
   .covid{
     margin-top: 5vh;
     width: 70vw;
