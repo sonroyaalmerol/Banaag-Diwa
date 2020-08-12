@@ -70,7 +70,7 @@ $window.scroll(function() {
             complete: function () {
             }
           });
-          $("#forms").stop().animate({top: "10vh"}, {
+          $("#forms").stop().animate({top: "-30vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
