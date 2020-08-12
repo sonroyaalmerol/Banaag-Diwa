@@ -71,7 +71,7 @@ $window.scroll(function() {
               document.getElementById("carousel").style.display = "none";
             }
           });
-          $("#forms").stop().animate({top: "-=30vh"}, {
+          $("#forms").stop().animate({top: "-30vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
@@ -93,7 +93,7 @@ $window.scroll(function() {
           $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
             duration: 1000
           });
-          $("#forms").stop().animate({top: "+=30vh"}, {
+          $("#forms").stop().animate({top: "=39vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
