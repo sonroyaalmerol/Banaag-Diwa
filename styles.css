@@ -543,14 +543,14 @@ li{
   }*/
   .covid{
     position: absolute;
-    top: 0;
-    width: 70%;
+    top: 20vh;
+    width: 70vw;
     height: auto;
   }
   .carousel{
     position: absolute;
-    top: 0;
-    width: 70%;
+    top: 20vh;
+    width: 70vw;
     height: auto;
   }
 
