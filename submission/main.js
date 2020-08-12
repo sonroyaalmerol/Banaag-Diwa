@@ -70,7 +70,7 @@ $window.scroll(function() {
             complete: function () {
             }
           });
-          $("#forms").stop().animate({top: "-60vh"}, {
+          $("#forms").stop().animate({top: "-40vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
@@ -92,7 +92,7 @@ $window.scroll(function() {
           $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
             duration: 1000
           });
-          $("#forms").stop().animate({top: "=39vh"}, {
+          $("#forms").stop().animate({top: "39vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
