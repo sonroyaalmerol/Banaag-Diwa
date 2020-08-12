@@ -126,6 +126,7 @@ input:-webkit-autofill {
     box-sizing: border-box;
     resize: vertical;
     border-radius: 0.3em;
+    -webkit-appearance: none;
 }
 
 /* When the inputs get focus, do something */
