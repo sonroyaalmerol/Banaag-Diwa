@@ -231,7 +231,7 @@ input:not(:focus):valid ~ .floating-label{
     }
     .covid{
         position: absolute;
-        top: 5vh;
+        top: 3vh;
         left: auto;
         right: auto;
         text-align: center;
