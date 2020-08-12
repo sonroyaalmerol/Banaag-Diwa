@@ -242,12 +242,11 @@ input:not(:focus):valid ~ .floating-label{
         margin-right: 10vw;
     }
     .form-container {
-        position: static;
-        top: 1vh;
+        position: absolute;
         right: auto;
         left: auto;
         text-align: center;
-        /*top: 39vh;*/
+        top: 40vh;
     }
     .buttons{
         text-align: left;
