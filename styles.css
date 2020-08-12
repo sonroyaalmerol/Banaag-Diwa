@@ -542,18 +542,7 @@ li{
     height: auto;
   }*/
   .covid{
-    position: absolute;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 20vh;
-    width: 70vw;
-    height: auto;
-  }
-  .carousel{
-    position: absolute;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 20vh;
+    margin-top: 5vh;
     width: 70vw;
     height: auto;
   }
