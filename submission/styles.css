@@ -236,8 +236,8 @@ input:not(:focus):valid ~ .floating-label{
         height: auto;*/
         position:absolute;
         top: 13%;
-        right: auto;
-        left: auto;
+        right: 0;
+        left: 0;
         text-align: center;
         width: 70vw;
         height: auto;
