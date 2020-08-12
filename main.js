@@ -122,6 +122,9 @@ function set_page(page) {
       $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
         duration: 1000
       });
+      $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
+        duration: 1000
+      });
       banaagpresent = true;
     }
   }
@@ -131,6 +134,9 @@ function set_page(page) {
     });
     if(banaagpresent == true){
       $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
+        duration: 1000
+      });
+      $(".covid").stop().animate({top: "-50vh", opacity: "0"}, {
         duration: 1000
       });
       banaagpresent = false;
