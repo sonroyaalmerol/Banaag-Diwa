@@ -54,7 +54,7 @@ var distance = $(".logo").offset().top,
 
 $window.scroll(function() {
     if(allowScroll){
-      if ( $window.scrollTop() >= distance && banaagpresent == true) {
+      if ( $window.scrollTop() <= distance && banaagpresent == true) {
         allowScroll = false;
         $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
           duration: 300, 
@@ -78,7 +78,7 @@ $window.scroll(function() {
           });
         }
       }
-      else if ( $window.scrollTop() < distance && banaagpresent == false) {
+      else if ( $window.scrollTop() > distance && banaagpresent == false) {
         allowScroll = false;
         $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
           duration: 300,
