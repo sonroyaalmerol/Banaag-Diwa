@@ -204,15 +204,9 @@ input:not(:focus):valid ~ .floating-label{
         padding-left: 0em;
     }
     .covid{
-        position:absolute;
-        top: 13%;
-        right: auto;
-        left: auto;
-        text-align: center;
-        width: 70vw;
-        height: auto;
-        margin-left: 10%;
-        margin-right: 10%;
+      margin-top: 5vh;
+      width: 70vw;
+      height: auto;
     }
     .form-container {
         right: auto;
@@ -230,6 +224,7 @@ input:not(:focus):valid ~ .floating-label{
     .upload_file{
         line-height: 2.5em;
     }
+    
 
 }
 
