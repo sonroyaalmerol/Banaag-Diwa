@@ -235,12 +235,14 @@ input:not(:focus):valid ~ .floating-label{
         width: 70vw;
         height: auto;*/
         position: absolute;
-        top: 10vh;
+        top: 0vh;
         left: auto;
         right: auto;
         text-align: center;
         width: 70vw;
         height: auto;
+        margin-left: 10vh;
+        margin-right: 10vh;
     }
     .form-container {
         right: auto;
