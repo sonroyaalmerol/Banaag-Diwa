@@ -62,7 +62,6 @@ $window.scroll(function() {
             allowScroll = true;
           }
         });
-        banaagpresent = false;
         if(screen.width < 1081){
           allowScroll = false;
           $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
@@ -77,6 +76,7 @@ $window.scroll(function() {
             }
           });
         }
+        banaagpresent = false;
       }
       else if ( $window.scrollTop() < distance && banaagpresent == false) {
         allowScroll = false;
@@ -85,8 +85,7 @@ $window.scroll(function() {
           complete: function () {
             allowScroll = true;
           }
-        });
-        banaagpresent = true;/*
+        });/*
         if(screen.width < 1081){
           allowScroll = false;
           $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
@@ -99,6 +98,7 @@ $window.scroll(function() {
             }
           });
         }*/
+        banaagpresent = true;
       }
     }
 });
