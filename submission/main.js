@@ -49,7 +49,7 @@ function line_out(f_number) {
 
 var banaagpresent = true , 
     allowScroll = true;
-var distance = $(".covid").offset().top,
+var distance = $("#forms").offset().top,
     $window = $(window);
 
 $window.scroll(function() {
