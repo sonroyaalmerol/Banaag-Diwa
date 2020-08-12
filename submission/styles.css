@@ -239,7 +239,7 @@ input:not(:focus):valid ~ .floating-label{
         right: auto;
         left: auto;
         text-align: center;
-        margin-top: 39vh;
+        top: 39vh;
     }
     .buttons{
         text-align: left;
