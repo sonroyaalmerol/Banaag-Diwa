@@ -47,42 +47,51 @@ function line_out(f_number) {
   });
 }
 
-var banaagpresent = true;
+var banaagpresent = true , 
+    allowScroll = true;
 var distance = $(".logo").offset().top,
     $window = $(window);
 
 $window.scroll(function() {
-    if ( $window.scrollTop() >= distance && banaagpresent == true) {
-      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
-        duration: 300, 
-      });
-      banaagpresent = false;
-      if(screen.width < 1081){
-        $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
-          duration: 1000,
-          complete: function () {
-            document.getElementById("carousel").style.display = "none";
-          }
+    if(allowScroll){
+      if ( $window.scrollTop() >= distance && banaagpresent == true) {
+        allowScroll = false;
+        $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
+          duration: 300, 
         });
-        $('html, body').stop().animate({
-          scrollTop: $('#forms').offset().top
-        }, {
+        banaagpresent = false;
+        if(screen.width < 1081){
+          $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
             duration: 1000,
             complete: function () {
-              allowScroll = false;
+              document.getElementById("carousel").style.display = "none";
             }
-        });
+          });
+          $("#forms").stop().animate({top: "-=30vh"}, {
+            duration: 1000,
+            complete: function () {
+              allowScroll = true;
+            }
+          });
+        }
       }
-    }
-    else if ( $window.scrollTop() < distance && banaagpresent == false) {
-      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-        duration: 300
-      });
-      banaagpresent = true;
-      if(screen.width < 1081){
-        $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
-          duration: 1000
+      else if ( $window.scrollTop() < distance && banaagpresent == false) {
+        allowScroll = false;
+        $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+          duration: 300
         });
+        banaagpresent = true;
+        if(screen.width < 1081){
+          $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
+            duration: 1000
+          });
+          $("#forms").stop().animate({top: "-=30vh"}, {
+            duration: 1000,
+            complete: function () {
+              allowScroll = true;
+            }
+          });
+        }
       }
     }
 });
