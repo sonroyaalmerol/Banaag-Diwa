@@ -231,7 +231,7 @@ input:not(:focus):valid ~ .floating-label{
         padding-left: 0em;
     }
     .covid{
-        position: relative;
+        position: absolute;
         top: 3vh;
         left: auto;
         right: auto;
