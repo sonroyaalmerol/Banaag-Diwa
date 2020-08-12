@@ -57,22 +57,31 @@ $window.scroll(function() {
         duration: 300
       });
       banaagpresent = false;
-      /*if(screen.width < 1081){
+      if(screen.width < 1081){
         $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
           duration: 1000
         });
-      }*/
+        $('html, body').stop().animate({
+          scrollTop: $('#forms').offset().top
+        }, {
+            duration: 1000,
+            complete: function () {
+              allowScroll = false;
+            }
+        });
+        document.getElementById("carousel").style.display = "none";
+      }
     }
     else if ( $window.scrollTop() < distance && banaagpresent == false) {
       $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
         duration: 300
       });
       banaagpresent = true;
-      /*if(screen.width < 1081){
+      if(screen.width < 1081){
         $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
           duration: 1000
         });
-      }*/
+      }
     }
 });
 
