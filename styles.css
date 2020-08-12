@@ -545,7 +545,7 @@ li{
     position: absolute;
     margin-left: 25%;
     margin-right: 25%;
-    top: 20vh;
+    margin-top: 20vh;
     width: 70vw;
     height: auto;
   }
@@ -553,7 +553,7 @@ li{
     position: absolute;
     margin-left: 25%;
     margin-right: 25%;
-    top: 20vh;
+    margin-top: 20vh;
     width: 70vw;
     height: auto;
   }
