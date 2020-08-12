@@ -62,20 +62,6 @@ $window.scroll(function() {
             allowScroll = true;
           }
         });
-        /*if(screen.width < 1081){
-          allowScroll = false;
-          $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
-            duration: 1000,
-            complete: function () {
-            }
-          });
-          $("#forms").stop().animate({top: "-29vh"}, {
-            duration: 1000,
-            complete: function () {
-              allowScroll = true;
-            }
-          });
-        }*/
         banaagpresent = false;
       }
       else if ( $window.scrollTop() < distance && banaagpresent == false) {
@@ -85,19 +71,7 @@ $window.scroll(function() {
           complete: function () {
             allowScroll = true;
           }
-        });/*
-        if(screen.width < 1081){
-          allowScroll = false;
-          $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
-            duration: 1000
-          });
-          $("#forms").stop().animate({top: "39vh"}, {
-            duration: 1000,
-            complete: function () {
-              allowScroll = true;
-            }
-          });
-        }*/
+        });
         banaagpresent = true;
       }
     }
