@@ -58,9 +58,13 @@ $window.scroll(function() {
         allowScroll = false;
         $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
           duration: 300, 
+          complete: function () {
+            allowScroll = true;
+          }
         });
         banaagpresent = false;
         if(screen.width < 1081){
+          allowScroll = false;
           $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
             duration: 1000,
             complete: function () {
@@ -78,14 +82,18 @@ $window.scroll(function() {
       else if ( $window.scrollTop() < distance && banaagpresent == false) {
         allowScroll = false;
         $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-          duration: 300
+          duration: 300,
+          complete: function () {
+            allowScroll = true;
+          }
         });
         banaagpresent = true;
         if(screen.width < 1081){
+          allowScroll = false;
           $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
             duration: 1000
           });
-          $("#forms").stop().animate({top: "-=30vh"}, {
+          $("#forms").stop().animate({top: "+=30vh"}, {
             duration: 1000,
             complete: function () {
               allowScroll = true;
