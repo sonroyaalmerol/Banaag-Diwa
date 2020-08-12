@@ -5,16 +5,12 @@ $(document).ready(function() {
       interval: 10000
     });
     $('#submission').bind('change', function() {
-        //var sub_elements = $('div.sub_type').children().hide(); // hide all the elements
         $('#docus').hide();
         $('#imgs').hide();
         $('#sbmt_btn').hide();
         var sub_value = $(this).val();
     
-        /*if (sub_value.length) { // if somethings' selected
-            sub_elements.filter('.' + sub_value).show(); // show the ones we want
-        }*/
-        if (sub_value.length){    // if somethings' selected
+        if (sub_value.length){    
           $('#docus').show();
           $('#sbmt_btn').show();
           document.getElementById("submission").style.color = "white";
@@ -50,14 +46,6 @@ function line_out(f_number) {
     duration: 300
   });
 }
-/*
-$(document).ready(function() {
-  if ($("#email").is(":focus")) {
-    $(`#line1`).stop().animate({width: "94.8%"}, {
-      duration: 300
-    });
-  }
-});*/
 
 var banaagpresent = true;
 var distance = $(".logo").offset().top,
@@ -95,9 +83,6 @@ function upload_details(file_num){
           if (i+1 != x.files.length){
             txt +=", "  
           }
-          /*if ('size' in file) {
-            txt += file.size/1000 + "kb, ";
-          }*/
         }
       }
     } 
@@ -111,20 +96,6 @@ function upload_details(file_num){
     }
     document.getElementById(`output_${file_num}`).innerHTML = txt;
 }
-/*
-function files_complete(){
-  var f_num = 0;
-  var x;
-  for (f_num = 0; f_num < 5; f_num++) {
-    x = document.getElementById(`f_${f_num}`);
-    if ('files' in x) {
-      if (x.files.length == 0) {
-        txt = "Select one or more files.";
-      }
-    }
-  }
-}
-*/
 
 var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".txt", ".docx", ".doc", ".pdf"];    
 function Validate(oForm) {
