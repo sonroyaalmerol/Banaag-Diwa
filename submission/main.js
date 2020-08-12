@@ -86,7 +86,7 @@ $window.scroll(function() {
             allowScroll = true;
           }
         });
-        banaagpresent = true;
+        banaagpresent = true;/*
         if(screen.width < 1081){
           allowScroll = false;
           $(".covid").stop().animate({top: "23vh", opacity: "1"}, {
@@ -98,7 +98,7 @@ $window.scroll(function() {
               allowScroll = true;
             }
           });
-        }
+        }*/
       }
     }
 });
