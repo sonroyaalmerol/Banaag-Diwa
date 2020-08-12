@@ -229,6 +229,7 @@ input:not(:focus):valid ~ .floating-label{
         font-size: 2.5em;
         line-height: 2em;
         padding-left: 0em;
+        white-space: nowrap;
     }
     .covid{
         position: absolute;
