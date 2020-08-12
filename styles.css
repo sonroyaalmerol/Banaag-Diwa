@@ -20,15 +20,54 @@
     top: 20%;
     z-index: -100;
 }
-.carousel.carousel-fade .carousel-item {
-  display: block;
-  opacity: 0;
-  transition: opacity ease-out 1s;
+#concept-1 {
+  animation-name: concept-1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
 }
-.carousel.carousel-fade .carousel-item.active {
-  opacity: 1 !important;
+@keyframes concept-1 {
+  0% {
+      opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
-
+#concept-2 {
+  animation-name: concept-2;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: none;
+  animation-delay: 0s;
+}
+@keyframes concept-2 {
+  0% {
+      opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
 .nav-title{
   position: absolute;
   font-family: PublicoText;
@@ -496,6 +535,7 @@ li{
   to {}
 }
 
+
 /* --------------------*/
 
 @media screen and (max-width: 1081px) {
@@ -511,7 +551,8 @@ li{
     top: 5vh;
   }
   .covid{
-    top: 23vh;
+    position: absolute;
+    top: 30vh;
     width: 70vw;
     height: auto;
   }
