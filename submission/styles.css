@@ -39,14 +39,54 @@ input:-webkit-autofill {
     right: 10%;
     top: 20%;
 }
-.carousel.carousel-fade .carousel-item {
-  display: block;
-  opacity: 0;
-  transition: opacity ease-out 1s;
-}
-.carousel.carousel-fade .carousel-item.active {
-  opacity: 1 !important;
-}
+#concept-1 {
+    animation-name: concept-1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+  }
+  @keyframes concept-1 {
+    0% {
+        opacity: 1;
+    }
+    40% {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  #concept-2 {
+    animation-name: concept-2;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: none;
+    animation-delay: 0s;
+  }
+  @keyframes concept-2 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
 .title{
     font-family: PublicoText; font-size: 3em; color:#fff;
 }
@@ -190,9 +230,10 @@ input:not(:focus):valid ~ .floating-label{
         padding-left: 0em;
     }
     .covid{
-      margin-top: -5vh;
-      width: 70vw;
-      height: auto;
+        position: absolute;
+        top: 30vh;
+        width: 70vw;
+        height: auto;
     }
     .form-container {
         right: auto;
