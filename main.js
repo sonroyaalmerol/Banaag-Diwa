@@ -67,11 +67,11 @@ function nav_selection_update() {
 }
 
 function change_dot_selection(select, deselect) {
-  $(`#${select}`).stop().animate({opacity: "1"}, {
-    duration: 1000
-  });
   $(`#${deselect}`).stop().animate({opacity: "0"}, {
     duration: 400
+  });
+  $(`#${select}`).stop().animate({opacity: "1"}, {
+    duration: 1000
   });
 
   $(`#dot${deselect}`).addClass('is-deselected');
@@ -155,9 +155,6 @@ function set_page(page) {
 
 
 $(document).ready(function() {
-  $('.carousel').carousel({
-    interval: 10000
-  });
   // mobile nav
   $(".button1").click(function() {
     $(".mobile_nav").toggleClass("active");
