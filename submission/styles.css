@@ -235,14 +235,10 @@ input:not(:focus):valid ~ .floating-label{
         width: 70vw;
         height: auto;*/
         position: absolute;
-        top: 13vh;
+        top: 10vh;
         left: auto;
         right: auto;
         text-align: center;
-        align-self: center;
-        align-content: center;
-        justify-content: center;
-        justify-self: center;
         width: 70vw;
         height: auto;
     }
