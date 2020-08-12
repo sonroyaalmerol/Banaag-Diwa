@@ -68,7 +68,6 @@ $window.scroll(function() {
           $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
             duration: 1000,
             complete: function () {
-              document.getElementById("carousel").style.display = "none";
             }
           });
           $("#forms").stop().animate({top: "-30vh"}, {
