@@ -190,7 +190,7 @@ input:not(:focus):valid ~ .floating-label{
         padding-left: 0em;
     }
     .covid{
-      margin-top: 0vh;
+      margin-top: -10vh;
       width: 70vw;
       height: auto;
     }
