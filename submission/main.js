@@ -54,12 +54,15 @@ var distance = $(".logo").offset().top,
 $window.scroll(function() {
     if ( $window.scrollTop() >= distance && banaagpresent == true) {
       $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
-        duration: 300
+        duration: 300, 
       });
       banaagpresent = false;
       if(screen.width < 1081){
         $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
-          duration: 1000
+          duration: 1000,
+          complete: function () {
+            document.getElementById("carousel").style.display = "none";
+          }
         });
         $('html, body').stop().animate({
           scrollTop: $('#forms').offset().top
@@ -69,7 +72,6 @@ $window.scroll(function() {
               allowScroll = false;
             }
         });
-        document.getElementById("carousel").style.display = "none";
       }
     }
     else if ( $window.scrollTop() < distance && banaagpresent == false) {
