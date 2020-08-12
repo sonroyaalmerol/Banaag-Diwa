@@ -49,7 +49,7 @@ function line_out(f_number) {
 
 var banaagpresent = true , 
     allowScroll = true;
-var distance = $("#forms").offset().top,
+var distance = $(".logo").offset().top,
     $window = $(window);
 
 $window.scroll(function() {
@@ -62,7 +62,7 @@ $window.scroll(function() {
             allowScroll = true;
           }
         });
-        if(screen.width < 1081){
+        /*if(screen.width < 1081){
           allowScroll = false;
           $(".covid").stop().animate({top: "-80vh", opacity: "0"}, {
             duration: 1000,
@@ -75,7 +75,7 @@ $window.scroll(function() {
               allowScroll = true;
             }
           });
-        }
+        }*/
         banaagpresent = false;
       }
       else if ( $window.scrollTop() < distance && banaagpresent == false) {
