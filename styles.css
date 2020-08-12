@@ -534,13 +534,26 @@ li{
     position: fixed;
     top: 5vh;
   }
-  .carousel{
+  /*.carousel{
     position:absolute;
     top: 30%;
     justify-self: center;
-    width: 70vw;
+    width: 70%;
+    height: auto;
+  }*/
+  .covid{
+    position: absolute;
+    top: 0;
+    width: 70%;
     height: auto;
   }
+  .carousel{
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: auto;
+  }
+
   .hdr-title{
     justify-content: center; 
     top: 20%;
