@@ -513,10 +513,10 @@ li{
 
 @keyframes m_anim_s {
   from {}
-  to {background-color: #E7B089; color: #233342;}
+  to {background-color: #E7B089; color: #1c2936;}
 }
 @keyframes m_anim_d {
-  from {background-color: #E7B089; color: #233342;}
+  from {background-color: #E7B089; color: #1c2936;}
   to {}
 }
 
@@ -543,12 +543,16 @@ li{
   }*/
   .covid{
     position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
     top: 20vh;
     width: 70vw;
     height: auto;
   }
   .carousel{
     position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
     top: 20vh;
     width: 70vw;
     height: auto;
@@ -616,6 +620,7 @@ li{
     height: 100vh;
     display: block;
     transition: all 0.5s;
+    background-color: #1c2936;
   }
   .mobile_nav ul {
     padding: 17vh 0;
