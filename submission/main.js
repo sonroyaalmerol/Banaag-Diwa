@@ -123,6 +123,8 @@ function clearForm() {
   document.getElementById("f_1").value = null;
   document.getElementById("f_2").value = null;
   document.getElementById("title").value = "";
+  document.getElementById("output_1").innerHTML = "";
+  document.getElementById("output_2").innerHTML = "";
 }
 
 async function postToWP(data) {
@@ -180,7 +182,7 @@ $("#submission_form").submit(function(e) {
   for (var i = 0; i < document.getElementById("f_2").files.length; i++) {
     formData.append('images[]', document.getElementById("f_2").files[i]);
   }
-  
+
   formData.append("title", document.getElementById("title").value);
   e.preventDefault();
   
