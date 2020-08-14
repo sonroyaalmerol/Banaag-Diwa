@@ -166,11 +166,11 @@ input[type=submit]:hover {
   background-color: #ba8d6e;
 }
 input[type=submit]:disabled {
-    background-color: #ebd6c7;
+    background-color: #ba8d6e;
     cursor: auto;
 }
 input[type=submit]:disabled:hover {
-    background-color: #ebd6c7;
+    background-color: #ba8d6e;
     cursor: auto;
 }
 
