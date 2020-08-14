@@ -162,10 +162,12 @@ input[type=submit] {
   margin-top: 2em;
   margin-left: 0em;
 }
-
 input[type=submit]:hover {
   background-color: #ba8d6e;
 }
+input[type=text]:disabled {
+    background: #ebd6c7;
+  }
 
 
 .dropdown_item{
