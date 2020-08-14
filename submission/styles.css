@@ -172,14 +172,18 @@ input[type=submit]:hover {
     color: white;
 }
 
+/* ----- UI Changes 14/08/2020 2:33PM ---- 
+
+START OF CHANGES ---*/
+
 .upload_file{
     background-color: none;
     color: white;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;    
-    width: 10em;
-    height: 2.5em;
+    width: 14em;
+    height: auto;
     line-height: 2.25em;
     border: 0.05em solid white;
     border-radius: 0.3em;
@@ -187,7 +191,11 @@ input[type=submit]:hover {
     margin-top: 0.5em;
     margin-left: 0em;
     font-size: smaller;
+    padding: 1.1em
 }
+
+/* end of changes */
+
 .upload_file:hover{
     background-color: #1b2733;
     color: white;
@@ -198,6 +206,7 @@ input[type=submit]:hover {
     margin-left: 0.5em;
     color: white;
 }
+
 
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label{

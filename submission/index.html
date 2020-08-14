@@ -7,6 +7,7 @@
 <title>Banaag Diwa</title>
 <link rel="icon" href="../sources/Logo BD.svg">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -57,18 +58,20 @@
           <option class="dropdown_item" value="4">4th Year</option>
           <option class="dropdown_item" value="5">5th Year</option>
         </select>
-        <span class="floating-label" id="floating_yrlvl">Year Level</span>
+        <span class="floating-label" id="floating_yrlvl"><i class="fas fa-bars"></i>&nbsp;&nbsp;&nbsp;Year Level</span>
         <span class="f_line" id="line3"></span>
       </div>
 
-      <div class="f_container">
+      <hr><h3 style="color:white; font-family: publico;">File upload</h3>
+
+      <div id="submission_container" class="f_container">
         <select size="1" id="submission" title="" name="sub_type" style="cursor: pointer; color: #969696;" required onfocus="line_in(4)" onblur="line_out(4)">
           <option value="" disabled selected></option>
           <option class="dropdown_item" value="2">Poems</option>
           <option class="dropdown_item" value="1">Short Stories</option>
           <option class="dropdown_item" value="0">Photo Essay</option>
         </select>
-        <span class="floating-label" id="floating_subtype">Submission Type</span>
+        <span class="floating-label" id="floating_subtype"><i class="fas fa-bars"></i>&nbsp;&nbsp;&nbsp;Submission Type</span>
         <span class="f_line" id="line4"></span>
 
         <div class="f_container" id="titlediv" style="display:none;">
@@ -79,12 +82,12 @@
         
         <div id="docus" style="margin-top: 1em;" class="buttons">
           <input type="file" name="uploadfile" id="f_1" style="display:none;" onchange="upload_details(1)"/>
-          <label class="upload_file" for="f_1">Upload Document</label>
+          <label class="upload_file" for="f_1"><i class="fas fa-upload"></i>&nbsp;&nbsp;&nbsp;Upload Document</label>
           <span class="output_list" id="output_1"></span>
         </div>
         <div id="imgs" class="buttons">
           <input type="file" name="uploadimg[]" id="f_2" style="display:none;" multiple size="10" onchange="upload_details(2)"/>
-          <label class="upload_file" for="f_2" >Upload Images</label>
+          <label class="upload_file" for="f_2" ><i class="fas fa-upload"></i>&nbsp;&nbsp;&nbsp;Upload Images</label>
           <span class="output_list" id="output_2"></span>
         </div>
         <div id="sbmt_btn" class="buttons">
