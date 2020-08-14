@@ -8,16 +8,20 @@ $(document).ready(function() {
         $('#docus').hide();
         $('#imgs').hide();
         $('#sbmt_btn').hide();
+        $('#titlediv').hide();
         var sub_value = $(this).val();
-    
-        if (sub_value.length){    
-          $('#docus').show();
-          $('#sbmt_btn').show();
-          document.getElementById("submission").style.color = "white";
-          document.getElementById("floating_subtype").setAttribute(
-            "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
-          if(sub_value == "photo_essay"){
-            $('#imgs').show();
+
+        if (sub_value) {
+          if (sub_value.length){    
+            $('#docus').show();
+            $('#sbmt_btn').show();
+            $('#titlediv').show();
+            document.getElementById("submission").style.color = "white";
+            document.getElementById("floating_subtype").setAttribute(
+              "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
+            if(sub_value == "0"){
+              $('#imgs').show();
+            }
           }
         }
 
@@ -27,10 +31,12 @@ $(document).ready(function() {
     $('#yrlvl').bind('change', function() {
       var sub_value2 = $(this).val();
       
-      if (sub_value2.length){
-        document.getElementById("yrlvl").style.color = "white";
-        document.getElementById("floating_yrlvl").setAttribute(
-          "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
+      if (sub_value2) {
+        if (sub_value2.length){
+          document.getElementById("yrlvl").style.color = "white";
+          document.getElementById("floating_yrlvl").setAttribute(
+            "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
+        }
       }
 
     }).trigger('change');
@@ -108,9 +114,77 @@ function upload_details(file_num){
     document.getElementById(`output_${file_num}`).innerHTML = txt;
 }
 
+function clearForm() {
+  document.getElementById("fullname").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("yrlvl").value = "";
+  document.getElementById("course").value = "";
+  document.getElementById("submission").value = "";
+  document.getElementById("f_1").value = null;
+  document.getElementById("f_2").value = null;
+  document.getElementById("title").value = "";
+}
+
+async function postToWP(data) {
+  document.getElementById("form_submit").disabled = true;
+  document.getElementById("form_submit").value = "Please wait...";
+
+  // change url of this to actual rest api plugin
+  axios.post('http://atenewswp.lan/wp-json/atenews/v1/banaag_diwa_submit', data, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }).then((res) => {
+    if (res.data.success) {
+      Swal.fire({
+        title: 'Successfully submitted work!',
+        text: '',
+        icon: 'success',
+        confirmButtonText: 'Confirm'
+      })
+      clearForm();
+    } else {
+      Swal.fire({
+        title: res.data.error,
+        text: '',
+        icon: 'error',
+        confirmButtonText: 'Confirm'
+      })
+    }
+    document.getElementById("form_submit").disabled = false;
+    document.getElementById("form_submit").value = "Submit";
+    console.log(res);
+  }).catch((err) => {
+    Swal.fire({
+      title: 'Network error',
+      text: '',
+      icon: 'error',
+      confirmButtonText: 'Confirm'
+    })
+    document.getElementById("form_submit").disabled = false;
+    document.getElementById("form_submit").value = "Submit";
+    console.log(err);
+  })
+}
+
+$("#submission_form").submit(function(e) {
+  var formData = new FormData();
+  formData.append("name", document.getElementById("fullname").value);
+  formData.append("email", document.getElementById("email").value,);
+  formData.append("year", document.getElementById("yrlvl").value);
+  formData.append("course", document.getElementById("course").value);
+  formData.append("type", document.getElementById("submission").value);
+  formData.append("document", document.getElementById("f_1").files[0]);
+  formData.append("images[]", document.getElementById("f_2").files);
+  formData.append("title", document.getElementById("title").value);
+  e.preventDefault();
+  
+  postToWP(formData);
+});
+
 var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".txt", ".docx", ".doc", ".pdf"];    
 function Validate(oForm) {
-  var arrInputs = oForm.getElementsByTagName("input");
+  /* var arrInputs = oForm.getElementsByTagName("input");
   for (var i = 0; i < arrInputs.length; i++) {
     var oInput = arrInputs[i];
     if (oInput.type == "file") {
@@ -130,8 +204,7 @@ function Validate(oForm) {
         }
       //}
     }
-  }
-  return true;
+  } */
 }
 
 
