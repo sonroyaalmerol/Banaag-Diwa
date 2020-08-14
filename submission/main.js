@@ -130,7 +130,8 @@ async function postToWP(data) {
   document.getElementById("form_submit").value = "Please wait...";
 
   // change url of this to actual rest api plugin
-  axios.post('http://atenewswp.lan/wp-json/atenews/v1/banaag_diwa_submit', data, {
+  //axios.post('http://atenewswp.lan/wp-json/atenews/v1/banaag_diwa_submit', data, {
+    axios.post('be0320742902.ngrok.io', data, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
