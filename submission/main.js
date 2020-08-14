@@ -131,7 +131,7 @@ async function postToWP(data) {
 
   // change url of this to actual rest api plugin
   //axios.post('http://atenewswp.lan/wp-json/atenews/v1/banaag_diwa_submit', data, {
-    axios.post('https://be0320742902.ngrok.io/wp-json/atenews/v1/banaag_diwa_submit', data, {
+  axios.post('https://be0320742902.ngrok.io/wp-json/atenews/v1/banaag_diwa_submit', data, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }
@@ -176,7 +176,11 @@ $("#submission_form").submit(function(e) {
   formData.append("course", document.getElementById("course").value);
   formData.append("type", document.getElementById("submission").value);
   formData.append("document", document.getElementById("f_1").files[0]);
-  formData.append("images[]", document.getElementById("f_2").files);
+
+  for (var i = 0; i < document.getElementById("f_2").files.length; i++) {
+    formData.append('images[]', document.getElementById("f_2").files[i]);
+  }
+  
   formData.append("title", document.getElementById("title").value);
   e.preventDefault();
   
