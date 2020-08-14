@@ -165,9 +165,12 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #ba8d6e;
 }
+input[type=submit]:disabled {
+    background-color: #ebd6c7;
+}
 input[type=submit]:disabled:hover {
-    background-color: blue;
-  }
+    background-color: #ebd6c7;
+}
 
 
 .dropdown_item{
