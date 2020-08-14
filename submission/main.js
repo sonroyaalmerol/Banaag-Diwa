@@ -117,8 +117,8 @@ function upload_details(file_num){
 function clearForm() {
   document.getElementById("fullname").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("yrlvl").value = "";
-  document.getElementById("course").value = "";
+  document.getElementById("yrlvl").value = null;
+  document.getElementById("course").value = null;
   document.getElementById("submission").value = "";
   document.getElementById("f_1").value = null;
   document.getElementById("f_2").value = null;
