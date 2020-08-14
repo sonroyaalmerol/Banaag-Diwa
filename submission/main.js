@@ -130,7 +130,7 @@ function clearForm() {
 async function postToWP(data) {
   document.getElementById("form_submit").disabled = true;
   document.getElementById("form_submit").value = "Please wait...";
-  $('input[type=submit]').removeClass('hover');
+  $('#form_submit').removeClass('input[type=submit]:hover');
 
   // change url of this to actual rest api plugin
   //axios.post('http://atenewswp.lan/wp-json/atenews/v1/banaag_diwa_submit', data, {
@@ -157,7 +157,7 @@ async function postToWP(data) {
     }
     document.getElementById("form_submit").disabled = false;
     document.getElementById("form_submit").value = "Submit";
-    $('input[type=submit]').addClass('hover');
+    $('#form_submit').addClass('input[type=submit]:hover');
     console.log(res);
   }).catch((err) => {
     Swal.fire({
@@ -168,7 +168,7 @@ async function postToWP(data) {
     })
     document.getElementById("form_submit").disabled = false;
     document.getElementById("form_submit").value = "Submit";
-    $('input[type=submit]').addClass('hover');
+    $('#form_submit').addClass('input[type=submit]:hover');
     console.log(err);
   })
 }
