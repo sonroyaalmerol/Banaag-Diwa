@@ -28,7 +28,7 @@
   <span class="banaag1" id="banaag" style=" position: fixed;">B<span style="font-size: 0.75em; letter-spacing: 0.3em;">ANAAG</span> D<span style="font-size: 0.75em; letter-spacing: 0.3em;">IWA</span></span>
   
   <div class="col-12 col-lg-6" id="forms">
-    <form action="" class="form-container col-12" onsubmit="return Validate(this);">
+    <form action="" class="form-container col-12" id="submission_form">
       <span class="title">Submission Form</span>
       <div class="f_container" style="margin-top: 0.5em;">
         <input class="txt_area" type="text" id="fullname" name="fullname" required onfocus="line_in(0)" onblur="line_out(0)">
@@ -64,25 +64,31 @@
       <div class="f_container">
         <select size="1" id="submission" title="" name="sub_type" style="cursor: pointer; color: #969696;" required onfocus="line_in(4)" onblur="line_out(4)">
           <option value="" disabled selected></option>
-          <option class="dropdown_item" value="poems">Poems</option>
-          <option class="dropdown_item" value="shrt_stry">Short Stories</option>
-          <option class="dropdown_item" value="photo_essay">Photo Essay</option>
+          <option class="dropdown_item" value="2">Poems</option>
+          <option class="dropdown_item" value="1">Short Stories</option>
+          <option class="dropdown_item" value="0">Photo Essay</option>
         </select>
         <span class="floating-label" id="floating_subtype">Submission Type</span>
         <span class="f_line" id="line4"></span>
+
+        <div class="f_container" id="titlediv" style="display:none;">
+          <input class="txt_area" type="text" id="title" name="title" required onfocus="line_in(5)" onblur="line_out(5)">
+          <span class="floating-label">Title</span>
+          <span class="f_line" id="line5"></span>
+        </div>
         
         <div id="docus" style="margin-top: 1em;" class="buttons">
-          <input  type="file" name="uploadfile" id="f_1" style="display:none;" multiple size="10" onchange="upload_details(1)"/>
-          <label class="upload_file" for="f_1">Upload Documents</label>
+          <input type="file" name="uploadfile" id="f_1" style="display:none;" onchange="upload_details(1)"/>
+          <label class="upload_file" for="f_1">Upload Document</label>
           <span class="output_list" id="output_1"></span>
         </div>
         <div id="imgs" class="buttons">
-          <input type="file" name="uploadimg" id="f_2" style="display:none;" multiple size="10" onchange="upload_details(2)"/>
+          <input type="file" name="uploadimg[]" id="f_2" style="display:none;" multiple size="10" onchange="upload_details(2)"/>
           <label class="upload_file" for="f_2" >Upload Images</label>
           <span class="output_list" id="output_2"></span>
         </div>
         <div id="sbmt_btn" class="buttons">
-          <input type="submit" value="Submit">
+          <input id="form_submit" type="submit" value="Submit">
         </div>
       </div>
 
@@ -96,8 +102,10 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
