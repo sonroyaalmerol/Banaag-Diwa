@@ -86,7 +86,6 @@ $window.scroll(function() {
 function upload_details(file_num){
     var x = document.getElementById(`f_${file_num}`);
     var txt = "";
-    document.getElementById(`output_${file_num}`).innerHTML = txt;
     if ('files' in x) {
       if (x.files.length == 0) {
         txt = "Select one or more files.";
