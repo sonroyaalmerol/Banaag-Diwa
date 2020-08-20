@@ -251,13 +251,13 @@ input:not(:focus):valid ~ .floating-label{
     .covid{
         position: absolute;
         top: 3vh;
-        left: auto;
-        right: auto;
+        left: 0%;
+        right: 0%;
         text-align: center;
         width: 70vw;
         height: auto;
-        margin-left: 10vw;
-        margin-right: 10vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
     .form-container {
         position: absolute;
