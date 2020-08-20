@@ -13,12 +13,12 @@
   position: fixed; left: 6vw; top: 10vh;
 }
 .covid {
-    position: fixed;
-    width: auto;
-    height: 70vh;
-    right: 10%;
-    top: 20%;
-    z-index: -100;
+  position: fixed;
+  width: auto;
+  height: 70vh;
+  right: 10%;
+  top: 20%;
+  z-index: -100;
 }
 #concept-1 {
   animation-name: concept-1;
@@ -91,27 +91,29 @@
   align-self: center;
 }
 
-.hdr-title{
+.hdr-2-titles{
   position: relative;
-  margin-left: 6%;
-  
+  margin-left: 0%;
+  color: #FFFFFF;
   font-family: PublicoText;
   font-style: normal;
   font-weight: bold;
-  font-size: 5em;
-  line-height: 1em;
+}
+.hdr-title{
+  font-size: 5em; 
+  padding-left: 8%;
   letter-spacing: 0.3em;
-  
+  line-height: 1em;
   color: #FFFFFF;
 }
-
 .hdr-title2{
-  font-size: 0.75em; 
+  font-size: 4em; 
   letter-spacing: 0.5em;
+  line-height: 1em;
 }
 
 .hdr-sub{
-  position: relative;
+  position: absolute;
   margin-left: 8%;
 
   font-family: Lato;
@@ -119,11 +121,7 @@
   font-weight: 300;
   font-size: 1.2em;
   line-height: 1.2em;
-
-
-
   color: #FFFFFF;
-
 }
 
 .bdy-txt{
@@ -435,7 +433,7 @@ li{
 }
 
 .active {
-  right: 0%;
+  right: 0em;
   transition: all 0.5s;
 }
 
@@ -468,13 +466,12 @@ li{
 }
 
 .button1 span {
+  position: absolute;
   background: #E7B089;
   width: 1.5em;
   height: 0.1em;
   display: block;
-  position: absolute;
   top: 45%;
-  right: 60%;
   transition: all 0.5s;
 }
 
@@ -550,29 +547,61 @@ li{
     position: fixed;
     top: 5vh;
   }
-  .covid{
+  .dot{
+    display: none;
+  }
+  /*.covid{
     position: absolute;
     top: 30vh;
     width: 70vw;
     height: auto;
+  }*/
+  .covid {
+    position: absolute;
+    height: auto;
+    width: 80vw;
+    left: 10%;
+    right: 10%;
+    top: 30%;
+    z-index: -100;
   }
-
+  .title-sub {
+    padding-top: 90%;
+  }
+  .hdr-2-titles{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+  }
   .hdr-title{
-    justify-content: center; 
-    top: 20%;
-    margin-left: 15%;
+    font-family: PublicoText;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 0%;
+    margin-right: 0%;
     font-size: 2.8em;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.3em;
+    line-height: 1em;
+    padding-left: 5%;
   }
   .hdr-title2{
-    font-size: 0.75em; 
-    letter-spacing: 0.4em;
+    font-family: PublicoText;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.2em; 
+    letter-spacing: 0.5em;
+    color: #FFFFFF;
+    line-height: 1em;
   }
 
   .hdr-sub{
     justify-content: center;
-    top: 20%;
-    margin-left: 18%;
+    top: 0%;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
     font-size: 0.5em;
     letter-spacing: 0.2em;
   }
@@ -581,7 +610,7 @@ li{
   }
   .row {
     justify-content: left; 
-    margin-left: 20vw;
+    /*margin-left: 20vw;*/
   }
   .bdy-title, .bdy-gdlns, .bdy-title2{
     font-size: 2.5em;
@@ -616,10 +645,15 @@ li{
     position: fixed;
     width: 15em;
     top: -5vh;
+    right: -15em;
     height: 100vh;
     display: block;
     transition: all 0.5s;
     background-color: #1c2936;
+  }
+  .active {
+    right: 0em;
+    transition: all 0.5s;
   }
   .mobile_nav ul {
     padding: 17vh 0;
