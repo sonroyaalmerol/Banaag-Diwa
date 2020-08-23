@@ -286,7 +286,7 @@ li{
 
 
 .sbmt-txt{
-  margin-top: 1.2em;
+  margin-top: 1em;
 }
 
 .btn-back2top{
@@ -652,10 +652,10 @@ li{
   .sbmt-txt{
     /*margin-left: 10vw; */
     margin-top: 0em;
-    top: -6%;
+    top: -8%;
   }
   .btn-back2top{
-    margin-left: 0%; 
+    margin-left: 5%; 
     font-size: 0.5em;
   }
   .mobile_nav {
