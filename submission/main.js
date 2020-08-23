@@ -1,6 +1,8 @@
 
 
 $(document).ready(function() {
+  
+    
     $('.carousel').carousel({
       interval: 10000
     });
@@ -26,8 +28,6 @@ $(document).ready(function() {
         }
 
     }).trigger('change');
-});
-$(document).ready(function() {
     $('#yrlvl').bind('change', function() {
       var sub_value2 = $(this).val();
       
@@ -42,6 +42,7 @@ $(document).ready(function() {
     }).trigger('change');
 });
 
+
 function line_in(f_number) {
     $(`#line${f_number}`).stop().animate({width: "100%"}, {
       duration: 300
@@ -55,33 +56,66 @@ function line_out(f_number) {
 
 var banaagpresent = true , 
     allowScroll = true;
+    
+var $window = $(window);
+var div = document.getElementById('covid_id');
+var orig = div.getBoundingClientRect();
+orig_y = orig.top;
+
 var distance = $(".logo").offset().top,
     $window = $(window);
 
 $window.scroll(function() {
-    if(allowScroll){
-      if ( $window.scrollTop() >= distance && banaagpresent == true) {
-        allowScroll = false;
-        $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
-          duration: 300, 
-          complete: function () {
-            allowScroll = true;
-          }
-        });
-        banaagpresent = false;
-      }
-      else if ( $window.scrollTop() < distance && banaagpresent == false) {
-        allowScroll = false;
-        $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
-          duration: 300,
-          complete: function () {
-            allowScroll = true;
-          }
-        });
-        banaagpresent = true;
-      }
+  if(allowScroll){
+    if ( $window.scrollTop() >= distance && banaagpresent == true) {
+      allowScroll = false;
+      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
+        duration: 300, 
+        complete: function () {
+          allowScroll = true;
+        }
+      });
+      banaagpresent = false;
     }
+    else if ( $window.scrollTop() < distance && banaagpresent == false) {
+      allowScroll = false;
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 300,
+        complete: function () {
+          allowScroll = true;
+        }
+      });
+      banaagpresent = true;
+    }
+  }
 });
+
+/*$window.scroll(function() {
+  if(allowScroll){
+    var rect = div.getBoundingClientRect();
+    y = rect.top;
+    if (y != orig_y && banaagpresent == true) {
+      allowScroll = false;
+      $("#banaag").stop().animate({left: "-=250px", opacity: "0"}, {
+        duration: 300, 
+        complete: function () {
+          allowScroll = true;
+        }
+      });
+      banaagpresent = false;
+    }
+    else if ( y == orig_y && banaagpresent == false) {
+      allowScroll = false;
+      $("#banaag").stop().animate({left: "+=250px", opacity: "1"}, {
+        duration: 300,
+        complete: function () {
+          allowScroll = true;
+        }
+      });
+      banaagpresent = true;
+    }
+  }
+});*/
 
 function upload_details(file_num){
     var x = document.getElementById(`f_${file_num}`);
