@@ -2,10 +2,9 @@
 
 $(document).ready(function() {
   
+    //document.body.scrollTop = 0; // For Safari
+    //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     
-    $('.carousel').carousel({
-      interval: 10000
-    });
     $('#submission').bind('change', function() {
         $('#docus').hide();
         $('#imgs').hide();
@@ -56,7 +55,7 @@ function line_out(f_number) {
 
 var banaagpresent = true , 
     allowScroll = true;
-    
+
 var $window = $(window);
 var div = document.getElementById('covid_id');
 var orig = div.getBoundingClientRect();
