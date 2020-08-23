@@ -100,15 +100,20 @@
   font-weight: bold;
 }
 .hdr-title{
+  margin-left: 0%;
+  color: #FFFFFF;
+  font-family: PublicoText;
+  font-style: normal;
+  font-weight: normal;
   font-size: 5em; 
   padding-left: 8%;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.4em;
   line-height: 1em;
   color: #FFFFFF;
 }
 .hdr-title2{
-  font-size: 4em; 
-  letter-spacing: 0.5em;
+  font-size: 0.8em; 
+  letter-spacing: 0.6em;
   line-height: 1em;
 }
 
@@ -578,23 +583,35 @@ li{
   .hdr-title{
     font-family: PublicoText;
     font-style: normal;
-    font-weight: bold;
-    margin-left: 0%;
-    margin-right: 0%;
-    font-size: 2.8em;
-    letter-spacing: 0.3em;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10vw;
+    letter-spacing: 0.5em;
     line-height: 1em;
-    padding-left: 5%;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
   }
   .hdr-title2{
     font-family: PublicoText;
     font-style: normal;
-    font-weight: bold;
-    font-size: 2.2em; 
-    letter-spacing: 0.5em;
+    font-weight: normal;
+    font-size: 0.8em; 
+    letter-spacing: 0.7em;
     color: #FFFFFF;
     line-height: 1em;
+    text-align: center;
   }
+  /*.hdr-title2{
+    font-family: PublicoText;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.2em; 
+    letter-spacing: 0.6em;
+    color: #FFFFFF;
+    line-height: 1em;
+  }*/
 
   .hdr-sub{
     justify-content: center;
@@ -614,26 +631,26 @@ li{
   }
   .bdy-title, .bdy-gdlns, .bdy-title2{
     font-size: 2.5em;
-    margin-left: 4.5vw;
+    /*margin-left: 4.5vw;*/
   }
   .bdy-gdlns-txt{
-    font-size: 1em;
+    font-size: 1.1em;
     margin-bottom: 20vh;
-    margin-left: 5vw;
+    /*margin-left: 5vw;*/
   }
   .bdy-txt, .bdy-txt2{
-    font-size: 1.2em;
-    margin-left: 5vw;
+    font-size: 1.1em;
+    /*margin-left: 5vw;*/
   }
   .sbmt-title{
     justify-self: left;
     font-size: 3em; 
     line-height: 1em;
-    margin-left: 10vw;
+    /*margin-left: 10vw;*/
     top: -5%;
   }
   .sbmt-txt{
-    margin-left: 10vw; 
+    /*margin-left: 10vw; */
     margin-top: 0em;
     top: -6%;
   }
