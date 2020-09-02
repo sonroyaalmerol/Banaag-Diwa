@@ -180,10 +180,10 @@ $(document).ready(function() {
   let touchstartY = 0;
   let touchendY = 0;
 
-  document.addEventListener('touchstart', function(event) {
-    touchstartY = event.changedTouches[0].screenY;
-  }, false);
   if (allowScroll) {
+    document.addEventListener('touchstart', function(event) {
+      touchstartY = event.changedTouches[0].screenY;
+    }, false);
     document.addEventListener('touchend', function(event) {
       touchendY = event.changedTouches[0].screenY;
 
