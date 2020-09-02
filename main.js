@@ -103,7 +103,7 @@ function set_page(page) {
     }, {
         duration: 1000,
         complete: function () {
-          allowScroll = true;
+          setTimeout(() => {  allowScroll = true; }, 500);
         }
     });
     $(`#${currentPage}`).stop().animate({opacity: "0"}, {
