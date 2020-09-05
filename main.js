@@ -180,22 +180,20 @@ $(document).ready(function() {
   let touchstartY = 0;
   let touchendY = 0;
 
-  if (allowScroll) {
-    document.addEventListener('touchstart', function(event) {
-      touchstartY = event.changedTouches[0].screenY;
-    }, false);
-    document.addEventListener('touchend', function(event) {
-      touchendY = event.changedTouches[0].screenY;
+  document.addEventListener('touchstart', function(event) {
+    touchstartY = event.changedTouches[0].screenY;
+  }, false);
+  document.addEventListener('touchend', function(event) {
+    touchendY = event.changedTouches[0].screenY;
 
-      if (allowScroll && touchendY != touchstartY) {
-        if (touchendY < touchstartY) {
-          // downscroll code
-          set_page(currentPage+1);
-        } else if (touchendY > touchstartY) {
-          // upscroll code
-          set_page(currentPage-1);
-        }
+    if (allowScroll && touchendY != touchstartY) {
+      if (touchendY < touchstartY) {
+        // downscroll code
+        set_page(currentPage+1);
+      } else if (touchendY > touchstartY) {
+        // upscroll code
+        set_page(currentPage-1);
       }
-    }, false);
-  }
+    }
+  }, false);
 });
