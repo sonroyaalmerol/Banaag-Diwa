@@ -89,6 +89,7 @@
   left: 25vw; 
   top: 10vh; 
   align-self: center;
+  z-index: 11;
 }
 
 .hdr-2-titles{
