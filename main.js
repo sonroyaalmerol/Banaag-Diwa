@@ -175,6 +175,7 @@ $(document).ready(function() {
       }
     }
   });*/
+  
   $(window).on('wheel', function(event){
     var num0 = event.originalEvent.deltaY;
     if (allowScroll) {
