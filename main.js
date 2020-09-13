@@ -179,10 +179,8 @@ $(document).ready(function() {
     var num0 = event.originalEvent.deltaY;
     if (allowScroll) {
       if (num0 > 0) {
-        // downscroll code
         set_page(currentPage+1);
       } else if (num0 < 0) {
-        // upscroll code
         set_page(currentPage-1);
       }
     }
