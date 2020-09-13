@@ -157,6 +157,7 @@
   font-size: 0.4em;
   line-height: 1.2em;
   padding-top: 1.5em;
+  margin-bottom: 10vh;
 }
 
 .bdy-title{
@@ -202,7 +203,7 @@
   font-size: 3em;
   line-height: 1em;
   color: #FFFFFF;
-  margin-bottom: 20vh;
+  /*margin-bottom: 20vh;*/
   left: 6%;
 }
 
