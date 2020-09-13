@@ -153,7 +153,6 @@ function set_page(page) {
   nav_selection_update();
 }
 
-
 $(document).ready(function() {
   // mobile nav
   $(".button1").click(function() {
@@ -164,13 +163,25 @@ $(document).ready(function() {
   // always reset to #0
   set_page(0);
 
-  $(window).bind('mousewheel', function(event) {
+  /*$(window).bind('mousewheel', function(event) {
     var num0 = event.originalEvent.wheelDelta/120;
     if (allowScroll) {
       if (num0 < 0) {
         // downscroll code
         set_page(currentPage+1);
       } else if (num0 > 0) {
+        // upscroll code
+        set_page(currentPage-1);
+      }
+    }
+  });*/
+  $(window).on('wheel', function(event){
+    var num0 = event.originalEvent.deltaY;
+    if (allowScroll) {
+      if (num0 > 0) {
+        // downscroll code
+        set_page(currentPage+1);
+      } else if (num0 < 0) {
         // upscroll code
         set_page(currentPage-1);
       }
