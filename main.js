@@ -54,8 +54,8 @@ function nav_selection_update() {
     $(`#line${num_l_prev}`).stop().animate({width: "0em"}, {
       duration: 1000
     });
-    $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
     $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
+    $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
     $(`#mobile${num_l}`).removeClass('mobile_deselected');
     $(`#mobile${num_l}`).addClass('mobile_selected');
   } else {
@@ -68,14 +68,14 @@ function nav_selection_update() {
 
 function change_dot_selection(select, deselect) {
   $(`#${deselect}`).stop().animate({opacity: "0"}, {
-    duration: 400
+    duration: 1000
   });
   $(`#${select}`).stop().animate({opacity: "1"}, {
     duration: 1000
   });
 
-  $(`#dot${deselect}`).addClass('is-deselected');
   $(`#dot${deselect}`).removeClass('is-selected');
+  $(`#dot${deselect}`).addClass('is-deselected');
   $(`#dot${select}`).removeClass('is-deselected');
   $(`#dot${select}`).addClass('is-selected');
 }
@@ -107,7 +107,7 @@ function set_page(page) {
         }
     });
     $(`#${currentPage}`).stop().animate({opacity: "0"}, {
-      duration: 400
+      duration: 1000
     });
     $(`#${page}`).stop().animate({opacity: "1"}, {
       duration: 1000
@@ -175,7 +175,7 @@ $(document).ready(function() {
       }
     }
   });*/
-  
+
   $(window).on('wheel', function(event){
     var num0 = event.originalEvent.deltaY;
     if (allowScroll) {
@@ -187,14 +187,16 @@ $(document).ready(function() {
     }
   });
 
-  let touchstartY = 0;
+  /*let touchstartY = 0;
   let touchendY = 0;
 
   document.addEventListener('touchstart', function(event) {
     touchstartY = event.changedTouches[0].screenY;
+    event.preventDefault();
   }, false);
   document.addEventListener('touchend', function(event) {
     touchendY = event.changedTouches[0].screenY;
+    event.preventDefault();
 
     if (allowScroll && touchendY != touchstartY) {
       if (touchendY < touchstartY) {
@@ -205,5 +207,18 @@ $(document).ready(function() {
         set_page(currentPage-1);
       }
     }
-  }, false);
+  }, false);*/
+  var ts;
+  $(document).bind('touchstart', function (e){
+    ts = e.originalEvent.touches[0].clientY;
+  });
+
+  $(document).bind('touchend', function (e){
+    var te = e.originalEvent.changedTouches[0].clientY;
+    if(ts > te+5){
+      set_page(currentPage+1);
+    }else if(ts < te-5){
+      set_page(currentPage-1);
+    }
+  });
 });
