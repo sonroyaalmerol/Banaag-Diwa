@@ -204,6 +204,8 @@
   line-height: 1em;
   color: #FFFFFF;
   /*margin-bottom: 20vh;*/
+  /*padding-left: 0.7em;*/
+  /*left: 8%;*/
   left: 6%;
 }
 
@@ -609,9 +611,14 @@ li{
     justify-content: left; 
     /*margin-left: 20vw;*/
   }
-  .bdy-title, .bdy-gdlns, .bdy-title2{
+  .bdy-title, .bdy-gdlns{
     font-size: 2.5em;
     /*margin-left: 4.5vw;*/
+  }
+  .bdy-title2{
+    /*font-size: 1.7em;
+    left: 8.5%;*/
+    font-size: 2.3em;
   }
   .bdy-gdlns-txt{
     font-size: 1.1em;
@@ -620,9 +627,11 @@ li{
   }
   .bdy-txt, .bdy-txt2{
     font-size: 1.1em;
+    padding-left: 1em;
     /*margin-left: 5vw;*/
   }
   .bdy-note{
+    /*font-size: 0.5em;*/
     margin-bottom: 20vh;
   }
   .sbmt-title{
