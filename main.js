@@ -215,10 +215,12 @@ $(document).ready(function() {
 
   $(document).bind('touchend', function (e){
     var te = e.originalEvent.changedTouches[0].clientY;
-    if(ts > te+5){
-      set_page(currentPage+1);
-    }else if(ts < te-5){
-      set_page(currentPage-1);
+    if (allowScroll && ts != te) {
+      if(ts > te+5){
+        set_page(currentPage+1);
+      }else if(ts < te-5){
+        set_page(currentPage-1);
+      }
     }
   });
 });
