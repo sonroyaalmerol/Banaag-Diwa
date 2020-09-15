@@ -336,10 +336,8 @@ li{
   height: 0; 
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
-  
   border-top: 1em solid #E7B089;
 }
-
 .scrll{
   position: relative;
   padding-bottom: 0.5em;
@@ -348,6 +346,31 @@ li{
   font-weight: normal;
   font-size: 0.9em;
   color: #E7B089;
+}
+
+.scrll_arrw2{
+  /*position: fixed;
+  top: 85vh;*/
+  position: relative;
+  font-size: 0.6em;
+}
+.scrll2{
+  position: relative;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 5em;
+  color: #E7B089;
+
+}
+.arrow2{
+  position: relative;
+  width: 0; 
+  height: 0; 
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid #E7B089;
 }
 
 .bounce {
