@@ -10,6 +10,7 @@ $(document).ready(function() {
         $('#imgs').hide();
         $('#sbmt_btn').hide();
         $('#titlediv').hide();
+        $('#pdf_only').hide();
         var sub_value = $(this).val();
 
         if (sub_value) {
@@ -17,6 +18,7 @@ $(document).ready(function() {
             $('#docus').show();
             $('#sbmt_btn').show();
             $('#titlediv').show();
+            $('#pdf_only').show();
             document.getElementById("submission").style.color = "white";
             document.getElementById("floating_subtype").setAttribute(
               "style", "top: 5px; left: 10px; opacity: 1; font-size: x-small;");
@@ -39,7 +41,15 @@ $(document).ready(function() {
       }
 
     }).trigger('change');
+
+    document.querySelector("#f_1").addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+        $('#pdf_only').hide();
+      }
+    });
 });
+
+
 
 
 function line_in(f_number) {
@@ -63,6 +73,7 @@ orig_y = orig.top;
 
 var distance = $(".logo").offset().top,
     $window = $(window);
+
 
 $window.scroll(function() {
   if(allowScroll){
@@ -222,29 +233,6 @@ $("#submission_form").submit(function(e) {
   postToWP(formData);
 });
 
-var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".txt", ".docx", ".doc", ".pdf"];    
-function Validate(oForm) {
-  /* var arrInputs = oForm.getElementsByTagName("input");
-  for (var i = 0; i < arrInputs.length; i++) {
-    var oInput = arrInputs[i];
-    if (oInput.type == "file") {
-      var sFileName = oInput.value;
-      //if (sFileName.length > 0) {
-        var blnValid = false;
-        for (var j = 0; j < _validFileExtensions.length; j++) {
-          var sCurExtension = _validFileExtensions[j];
-          if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
-            blnValid = true;
-            break;
-          }
-        }
-        if (!blnValid) {
-          alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
-          return false;
-        }
-      //}
-    }
-  } */
-}
+
 
 
