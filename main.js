@@ -210,6 +210,7 @@ $(document).ready(function() {
   }, false);*/
   var ts;
   $(document).bind('touchstart', function (e){
+    e.preventDefault();
     ts = e.originalEvent.touches[0].clientY;
   });
 
