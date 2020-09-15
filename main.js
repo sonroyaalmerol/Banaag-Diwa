@@ -54,8 +54,8 @@ function nav_selection_update() {
     $(`#line${num_l_prev}`).stop().animate({width: "0em"}, {
       duration: 1000
     });
-    $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
     $(`#mobile${num_l_prev}`).addClass('mobile_deselected');
+    $(`#mobile${num_l_prev}`).removeClass('mobile_selected');
     $(`#mobile${num_l}`).removeClass('mobile_deselected');
     $(`#mobile${num_l}`).addClass('mobile_selected');
   } else {
@@ -74,8 +74,8 @@ function change_dot_selection(select, deselect) {
     duration: 1000
   });
 
-  $(`#dot${deselect}`).removeClass('is-selected');
   $(`#dot${deselect}`).addClass('is-deselected');
+  $(`#dot${deselect}`).removeClass('is-selected');
   $(`#dot${select}`).removeClass('is-deselected');
   $(`#dot${select}`).addClass('is-selected');
 }
