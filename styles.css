@@ -200,7 +200,7 @@
   font-family: PublicoText;
   font-style: normal;
   font-weight: normal;
-  font-size: 3em;
+  font-size: 2.5em;
   line-height: 1em;
   color: #FFFFFF;
   /*margin-bottom: 20vh;*/
@@ -633,7 +633,7 @@ li{
   .bdy-title2{
     /*font-size: 1.7em;
     left: 8.5%;*/
-    font-size: 2.3em;
+    font-size: 2.5em;
   }
   .bdy-gdlns-txt{
     font-size: 1.1em;
