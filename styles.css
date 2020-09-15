@@ -349,10 +349,9 @@ li{
 }
 
 .scrll_arrw2{
-  /*position: fixed;
-  top: 85vh;*/
-  position: relative;
-  font-size: 0.6em;
+  position: fixed;
+  top: 85vh;
+  font-size: 0.7em;
 }
 .scrll2{
   position: relative;
@@ -689,6 +688,9 @@ li{
   }
   .button1 span {
     right: 30%;
+  }
+  .scrll_arrw2{
+    font-size: 0.8em;
   }
   #scrll1{
     display: none;
