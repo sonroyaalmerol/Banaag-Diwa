@@ -552,7 +552,8 @@ li{
 
 /* --------------------*/
 
-@media screen and (max-width: 1081px) {
+
+@media only screen and (max-width: 1081px) {
   
   .logo{
     top: 5vh;
