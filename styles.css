@@ -362,15 +362,6 @@ li{
   font-size: 1em;
   line-height: 5em;
   color: #E7B089;
-
-}
-.arrow2{
-  position: relative;
-  width: 0; 
-  height: 0; 
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-top: 1em solid #E7B089;
 }
 
 .bounce {
