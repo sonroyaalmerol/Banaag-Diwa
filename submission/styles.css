@@ -233,6 +233,9 @@ input:not(:focus):valid ~ .floating-label{
 }
 
 
+#pdf_2{
+    display: none;
+}
 
 @media screen and (max-width: 1081px) {
     .logo{
@@ -275,6 +278,12 @@ input:not(:focus):valid ~ .floating-label{
     }
     .upload_file{
         line-height: 2.5em;
+    }
+    #pdf_2{
+      display: inline-block;
+    }
+    #pdf_1{
+      display: none;
     }
     
 
