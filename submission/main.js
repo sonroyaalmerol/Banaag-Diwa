@@ -215,22 +215,28 @@ async function postToWP(data) {
 }
 
 $("#submission_form").submit(function(e) {
-  var formData = new FormData();
-  formData.append("name", document.getElementById("fullname").value);
-  formData.append("email", document.getElementById("email").value,);
-  formData.append("year", document.getElementById("yrlvl").value);
-  formData.append("course", document.getElementById("course").value);
-  formData.append("type", document.getElementById("submission").value);
-  formData.append("document", document.getElementById("f_1").files[0]);
-
-  for (var i = 0; i < document.getElementById("f_2").files.length; i++) {
-    formData.append('images[]', document.getElementById("f_2").files[i]);
-  }
-
-  formData.append("title", document.getElementById("title").value);
   e.preventDefault();
-  
-  postToWP(formData);
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LfAxswZAAAAABJNdXX5L0onxMkM4Sqk_1X-vMw7', {action: 'submit'}).then(function(token) {
+      // Add your logic to submit to your backend server here.
+      var formData = new FormData();
+      formData.append("recaptcha_token", token);
+      formData.append("name", document.getElementById("fullname").value);
+      formData.append("email", document.getElementById("email").value,);
+      formData.append("year", document.getElementById("yrlvl").value);
+      formData.append("course", document.getElementById("course").value);
+      formData.append("type", document.getElementById("submission").value);
+      formData.append("document", document.getElementById("f_1").files[0]);
+
+      for (var i = 0; i < document.getElementById("f_2").files.length; i++) {
+        formData.append('images[]', document.getElementById("f_2").files[i]);
+      }
+
+      formData.append("title", document.getElementById("title").value);
+      
+      postToWP(formData);
+    });
+  });
 });
 
 
